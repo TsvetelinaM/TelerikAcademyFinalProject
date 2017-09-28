@@ -9,85 +9,110 @@
   <link rel="shortcut icon" href="./services.ico" />
 
   <link rel="stylesheet" href="./libs/bootstrap/dist/css/bootstrap.css">
-  <link rel="stylesheet" href="./css/toastr.css">
-  <link rel="stylesheet" href="./css/jquery-ui.css">
-  <link rel="stylesheet" href="./css/please-wait.css">
-  <link rel="stylesheet" href="./css/font-blacJack.css">
-  <link rel="stylesheet" href="./css/main.css">
-  <link rel="stylesheet" href="./css/footer.css">
+  <link rel="stylesheet" href="./styles/css/toastr.css">
+  <link rel="stylesheet" href="./styles/css/jquery-ui.css">
+  <link rel="stylesheet" href="./styles/css/please-wait.css">
+  <link rel="stylesheet" href="./styles/css/font-blacJack.css">
+  <link rel="stylesheet" href="./styles/css/main.css">
+  <link rel="stylesheet" href="./styles/css/footer.css">
 </head>
 
 <body>
-    <header>
-        <div class="header">
-            <nav class="navbar-default">
-              <div class="container-fluid">
+  <div id="wrapper">
+    <header class="header container-fluid">
+            <a class="navbar-brand" href="#/">
+              <span class = "tm-envisioned">the home of services</span>
+            </a>
+            <nav class="navbar-default container-fluid tm-hbox">
                 <div class="navbar-header col-lg-8">
-                  <span class = "envisioned">the home of services</span>
+                    <ul class="tm-nav tm-hbox">
+                        <li class="tm-nav-item">
+                          <a class="tm-nav-link" href="#">Home</a>
+                        </li>
+                        <li class="tm-nav-item">
+                          <a class="tm-nav-link" href="#">Services</a>
+                          <nav class="tm-nav-dropdown--show">
+                              <ul class="tm-nav-dropdown-list">
+                                  <li class="tm-nav-dropdown-list-item">
+                                    <a href="#" class="tm-nav-dropdown-list-item-link">Home</a>
+                                  </li>
+                                  <li class="tm-nav-dropdown-list-item">
+                                    <a href="#/services" class="tm-nav-dropdown-list-item-link">Services</a>
+                                  </li>
+                                  <li class="tm-nav-dropdown-list-item">
+                                    <a href="#/about" class="tm-nav-dropdown-list-item-link">About</a>
+                                  </li>
+                              </ul>
+                          </nav>
+                        </li>
+                        <li class="tm-nav-item">
+                          <a class="tm-nav-link" href="#">About</a>
+                        </li>
+                      </ul>
                 </div>
-                </div>
-              </div>
             </nav>
-          </div>
     </header>
+
     <main>
     <!-- <div id="main"  class="container">
     </div> -->
       </main>
     <footer>
       <div class="footer"class="container-fluid text-center">
-        <section class = "tm_section_1">
-          <h6 class = "tm_footer_section1_h6">
-              Who We Are
-          </h6>
-          <p class="tm_footer_section1_p">
-            Rhoncus quis, varius sed velit. Mauris quis nunc eu nunc molestie 
-            egestas et sit amet odio. Morbi lacinia velit in nibh sodales sed 
-            pharetra sem feugiat. Vivamus ut cursus augue. Integer sit amet 
-            arcu lorem, at egestas tellus. Phasellus tellus orci, congue at 
-            tristique at, mattis ut arcu. Donec dictum eros eu felis laoreet egestas. 
-          </p>
-        </section>
-        <section class = "tm_section_2">
-            <h6 class = "tm_footer_section2_h6">
-                Custom Text Widget
-            </h6>
-            <ul class="tm_footer_section2_ul">
-              <li>Rhoncus quis varius sed velit nibh moles</li>
-              <li>Mauris quis nunc eu nunc molestie</li>
-              <li>Egestas et sit amet odio morbi quis nunc </li>
-              <li>Lacinia velit in nibh sodales sed quis nunc </li>
-              <li>Pharetra sem feugiat nibh sodales sed </li>
-              <li>Vivamus ut cursus augue nibh sodales sed</li>
-            </ul>
-        </section>
-        <section  class = "tm_section_3">
-            <h6 class = "tm_footer_section3_h6">
-              Recent Posts
-            </h6>
-            <p class="tm_footer_section3_p">
-                Rhoncus quis, varius sed velit. Mauris quis nunc 
-                eu nunc molestie egestas et sit amet odio. Morbi 
-                lacinia velit in nibh sodales sed pharetra sem feugiat.
-                 Vivamus ut cursus augue. Integer sit amet arcu lorem, 
-                 at egestas tellus. Phasellus tellus orci, congue at 
-                 tristique at, mattis ut arcu. Donec dictum eros eu 
-                 felis laoreet egestas. Nullam adipiscing nibh id 
-                 felis lacinia a iaculis nisi vestibulum. Ut sit 
-                 amet urna enim, at accumsan quam. Nunc dui elit, 
-                 hendrerit quis convallis sit amet, dapibus in metus. 
-                 Ut dolor est, blandit a auctor vitae, accumsan id eros. 
-                 Vivamus bibendum dolor eget lacus hendrerit et egestas 
-                 risus tincidunt. Vivamus convallis magna sit amet orci 
-                 vehicula suscipit. Quisque rhoncus lorem in ligula 
-                 condimentum sollicitudin at a massa. Donec mattis, 
-                 libero at euismod semper, magna est bibendum arcu, 
-                 sit amet tempor lacus mi nec felis. Vestibulum erat ante, 
-                 laoreet et dignissim ac, blandit dictum elit. Cras auctor 
-                 iaculis mi at blandit. Fusce id velit metus. 
-                Duis turpis ante, consequat a hendrerit nec, biben
-            </p>
-        </section>
+        <div class="tm_">
+              <section class = "tm_section_1">
+                <h6 class = "tm_footer_section1_h6">
+                    Who We Are
+                </h6>
+                <p class="tm_footer_section1_p">
+                  Rhoncus quis, varius sed velit. Mauris quis nunc eu nunc molestie 
+                  egestas et sit amet odio. Morbi lacinia velit in nibh sodales sed 
+                  pharetra sem feugiat. Vivamus ut cursus augue. Integer sit amet 
+                  arcu lorem, at egestas tellus. Phasellus tellus orci, congue at 
+                  tristique at, mattis ut arcu. Donec dictum eros eu felis laoreet egestas. 
+                </p>
+              </section>
+              <section class = "tm_section_2">
+                  <h6 class = "tm_footer_section2_h6">
+                      Custom Text Widget
+                  </h6>
+                  <ul class="tm_footer_section2_ul">
+                    <li>Rhoncus quis varius sed velit nibh moles</li>
+                    <li>Mauris quis nunc eu nunc molestie</li>
+                    <li>Egestas et sit amet odio morbi quis nunc </li>
+                    <li>Lacinia velit in nibh sodales sed quis nunc </li>
+                    <li>Pharetra sem feugiat nibh sodales sed </li>
+                    <li>Vivamus ut cursus augue nibh sodales sed</li>
+                  </ul>
+              </section>
+              <section  class = "tm_section_3">
+                  <h6 class = "tm_footer_section3_h6">
+                    Recent Posts
+                  </h6>
+                  <p class="tm_footer_section3_p">
+                      Rhoncus quis, varius sed velit. Mauris quis nunc 
+                      eu nunc molestie egestas et sit amet odio. Morbi 
+                      lacinia velit in nibh sodales sed pharetra sem feugiat.
+                      Vivamus ut cursus augue. Integer sit amet arcu lorem, 
+                      at egestas tellus. Phasellus tellus orci, congue at 
+                      tristique at, mattis ut arcu. Donec dictum eros eu 
+                      felis laoreet egestas. Nullam adipiscing nibh id 
+                      felis lacinia a iaculis nisi vestibulum. Ut sit 
+                      amet urna enim, at accumsan quam. Nunc dui elit, 
+                      hendrerit quis convallis sit amet, dapibus in metus. 
+                      Ut dolor est, blandit a auctor vitae, accumsan id eros. 
+                      Vivamus bibendum dolor eget lacus hendrerit et egestas 
+                      risus tincidunt. Vivamus convallis magna sit amet orci 
+                      vehicula suscipit. Quisque rhoncus lorem in ligula 
+                      condimentum sollicitudin at a massa. Donec mattis, 
+                      libero at euismod semper, magna est bibendum arcu, 
+                      sit amet tempor lacus mi nec felis. Vestibulum erat ante, 
+                      laoreet et dignissim ac, blandit dictum elit. Cras auctor 
+                      iaculis mi at blandit. Fusce id velit metus. 
+                      Duis turpis ante, consequat a hendrerit nec, biben
+                  </p>
+              </section>
+          </div>
         <section>
           <div class = "tm_footer_section_last_row">
             <span class = "tm_footer_section_buttons">
@@ -100,16 +125,17 @@
         </section>
       </div>
     </footer>
+  </div>
 
 
   <script src="./libs/please-wait.js"></script>
   <script src="./libs/firebase.js"></script>
-  <script src="./libs/firebase_conf.js" charset="utf-8"></script>
+  <script src="./scripts/config/firebase_conf.js" charset="utf-8"></script>
   <!-- IE 11/10 support polyfills-->
   <script src="./libs/es5-shim.min.js"></script>
   <script src="./libs/es6-shim.min.js"></script>
   <script src="./libs/systemjs/dist/system.js"></script>
-  <script src="./scripts/system-config.js"></script>
+  <script src="./scripts/config/system-config.js"></script>
 </body>
 
 </html>

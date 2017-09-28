@@ -1,4 +1,4 @@
-import $ from 'jquery';
+import 'jquery';
 
 const database = {
     // Adding users methods

@@ -9,7 +9,7 @@ System.config({
    'main': './scripts/main.js',
    'templates': './scripts/templates.js',
    'localStorage': './scripts/local-storage.js',
-   'homeController': '../controllers/home-controller.js',
+   'homeController': './controllers/home-controller.js',
    
 
 

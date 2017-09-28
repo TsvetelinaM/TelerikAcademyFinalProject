@@ -1,0 +1,138 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #222222;
+  background-color: #11161c;
+  background-image: url("../imgs/bg_common.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  flex-direction: row; }
+
+.tm-hbox {
+  display: flex;
+  flex-direction: row; }
+
+.tm-vbox {
+  display: flex;
+  flex-direction: column; }
+
+.tm-flex {
+  flex: 1 1 auto; }
+
+#wrapper {
+  width: 75%;
+  height: 800px;
+  margin: 0 auto;
+  padding-top: 65px; }
+
+.header, .navbar-default {
+  display: block;
+  background-color: transparent;
+  margin-left: 0px; }
+
+.navbar-brand {
+  margin-bottom: 35px; }
+  .navbar-brand .tm-envisioned {
+    margin-left: 13px;
+    font-size: 36px;
+    font-family: "BlackJackRegular";
+    color: white;
+    line-height: 1;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.004);
+    position: relative;
+    z-index: 2;
+    display: block; }
+
+.navbar-default, .container-fluid {
+  margin: 0px;
+  padding: 0px;
+  width: 100%; }
+
+.navbar-header {
+  border-radius: 10px;
+  background: linear-gradient(to bottom, #3e4852 0%, #323b44 100%);
+  border-top: 1px solid #4f5861;
+  height: 50px;
+  width: 100%;
+  padding: 0 23px 0 23px;
+  position: relative;
+  z-index: 4; }
+  .navbar-header .tm-nav {
+    padding: 0;
+    height: 100%;
+    list-style-type: none; }
+    .navbar-header .tm-nav .tm-nav-item {
+      line-height: 3;
+      font-size: 12px;
+      padding: 0.5em 1em 0 0;
+      font-family: sans-serif;
+      font-weight: normal;
+      font-style: normal; }
+      .navbar-header .tm-nav .tm-nav-item .tm-nav-link {
+        margin-bottom: 0;
+        color: #ffffff;
+        text-shadow: 1px 1px 2px #000000;
+        text-decoration: none; }
+        .navbar-header .tm-nav .tm-nav-item .tm-nav-link:hover {
+          font-family: "Georgia";
+          color: #8d96a0 !important;
+          font-style: italic;
+          text-shadow: 1px 1px 2px #000000;
+          font-style: italic; }
+
+.tm-is-active {
+  font-family: "Georgia";
+  color: #8d96a0 !important;
+  font-style: italic;
+  text-shadow: 1px 1px 2px #000000; }
+
+.tm-nav-dropdown {
+  display: none;
+  position: absolute;
+  float: none;
+  top: 100%;
+  z-index: 3; }
+
+.tm-nav-dropdown--show {
+  top: 100%;
+  position: absolute;
+  display: block; }
+
+.tm-nav-dropdown-list {
+  list-style: none;
+  padding: 0;
+  width: 220px;
+  background-color: #323b44;
+  border-left: 1px solid #4f5861;
+  border-radius: 0 0 10px 10px; }
+  .tm-nav-dropdown-list .tm-nav-dropdown-list-item {
+    padding: 0.5em 0 0.5 0;
+    padding: 10px 0 10px 35px; }
+    .tm-nav-dropdown-list .tm-nav-dropdown-list-item .tm-nav-dropdown-list-item-link {
+      font-family: sans-serif;
+      padding-right: 15px;
+      text-decoration: none;
+      color: #ffffff;
+      text-shadow: 1px 1px 2px #000000;
+      transition: all 0.05s ease-in-out; }
+      .tm-nav-dropdown-list .tm-nav-dropdown-list-item .tm-nav-dropdown-list-item-link:hover {
+        font-family: "Georgia";
+        color: #8d96a0;
+        font-style: italic; }

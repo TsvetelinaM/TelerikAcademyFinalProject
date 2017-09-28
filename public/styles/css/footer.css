@@ -1,12 +1,9 @@
 .footer {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 1400px;
-  height: 1939px;
-  z-index: 26;
+    display: block;
+    padding-top: 2%;
+    padding-bottom: 2%;
 }
-.tm_footer_section_buttons {
+/* .tm_footer_section_buttons {
   font-size: 12px;
   font-family: "Georgia";
   color: rgb(141, 150, 160);
@@ -163,4 +160,4 @@
   width: 1400px;
   height: 66px;
   z-index: 8;
-}
+} */

@@ -9,8 +9,8 @@ System.config({
    'main': './scripts/main.js',
    'templates': './scripts/templates.js',
    'localStorage': './scripts/local-storage.js',
-   'homeController': './controllers/home-controller.js',
-   
+   'homeController': './scripts/controllers/home-controller.js',
+   'servicesController': './scripts/controllers/services-controller.js',   
 
 
    //models
@@ -26,4 +26,3 @@ System.config({
  }
 });
 
-System.import('main');

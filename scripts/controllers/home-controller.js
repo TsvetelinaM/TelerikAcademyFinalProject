@@ -6,5 +6,5 @@ function all(context) {
         context.$element().html(template());
     })
 }
-
 export { all };
+

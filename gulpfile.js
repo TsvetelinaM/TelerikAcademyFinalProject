@@ -6,10 +6,11 @@ const concat = require('gulp-concat');
 const cleanCSS = require('gulp-clean-css');
 const gutil = require('gulp-util');
 const babel = require('gulp-babel');
-const shell = require('gulp-shell')
+const shell = require('gulp-shell');
+const systemjsBuilder = require('gulp-systemjs-builder');
 
 gulp.task('server', () => {
-    gulp.src('public')
+    gulp.src('./')
         .pipe(webserver({
             livereload: true,
             open: true,
@@ -18,25 +19,35 @@ gulp.task('server', () => {
 });
 
 gulp.task('styles', () => {
-    gulp.src('./public/styles/scss/**/*.scss')
+    gulp.src('./styles/scss/**/*.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('./public/styles/css'));
-    gulp.watch('./public/styles/scss/**/*.scss', ['styles']);
+        .pipe(gulp.dest('./styles/css'));
+    gulp.watch('./styles/scss/**/*.scss', ['styles']);
 });
 
+// gulp.task('compile', () => {
+//     gulp.src('./public/scripts/**/*.js')
+//         .pipe(babel({
+//             presets: ['env'],
+//         }))
+//         .pipe(uglify())
+//         .on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
+//         .pipe(concat('all.min.js'))
+//         .pipe(gulp.dest('./build/scripts'));
+// });
+
 gulp.task('compile', () => {
-    gulp.src('./public/scripts/**/*.js')
-        .pipe(babel({
-            presets: ['env'],
-        }))
-        .pipe(uglify())
-        .on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
-        .pipe(concat('all.min.js'))
+    const builder = systemjsBuilder('./', './scripts/config/system-config.js');
+    builder.buildStatic('./scripts/main.js', 'bundle.js', {
+        minify: true,
+        mangle: false,
+    })
         .pipe(gulp.dest('./build/scripts'));
 });
 
+
 gulp.task('clean', () => {
-    gulp.src('./public/styles/css/**/*.css')
+    gulp.src('./styles/css/**/*.css')
         .pipe(cleanCSS({ compatibility: 'ie8' }))
         .pipe(concat('style.min.css'))
         .pipe(gulp.dest('./build/css'));

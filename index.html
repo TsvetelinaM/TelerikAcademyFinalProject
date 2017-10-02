@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>The Home of Services</title>
+  <title>The Home of Аccounting</title>
   <link rel="shortcut icon" href="./services.ico" />
 
   <link rel="stylesheet" href="./libs/bootstrap/dist/css/bootstrap.css">
@@ -15,13 +15,18 @@
   <link rel="stylesheet" href="./styles/css/font-blacJack.css">
   <link rel="stylesheet" href="./styles/css/main.css">
   <link rel="stylesheet" href="./styles/css/services.css">
+  <link rel="stylesheet" href="./styles/css/carousel.css">
+  <link rel="stylesheet" href="./styles/css/quote.css">
+  <link rel="stylesheet" href="./styles/css/home.css">
+  <link rel="stylesheet" href="./styles/css/aside.css">  
+  <link rel="stylesheet" href="./styles/css/login.css"> 
 </head>
 
 <body>
   <div id="wrapper">
     <header class="header">
             <a class="navbar-brand" href="#/">
-              <span class = "tm-envisioned">the home of services</span>
+              <span class = "tm-envisioned">the home of accounting</span>
             </a>
             <nav class="navbar-default container-fluid tm-hbox">
                 <div class="navbar-header col-lg-8">
@@ -47,6 +52,12 @@
                         </li>
                         <li class="tm-nav-item">
                           <a class="tm-nav-link tm-link-btn" href="#/about">About</a>
+                        </li>
+                        <li id="tm-btn-login" class="tm-nav-item">
+                          <a class="tm-nav-link tm-link-btn" href="#/login">Log In</a>
+                        </li>
+                        <li id="tm-btn-signout" class="tm-nav-item tm-hidden">
+                          <a class="tm-nav-link tm-link-btn" href="#/">Log Out</a>
                         </li>
                       </ul>
                 </div>
@@ -93,15 +104,14 @@
                   </p>
                 </div>
               </div>
-            <section class="tm_footer_section_copyright tm-hbox">
-                <div class = "tm-hbox">
+            <section class="tm_footer_section_copyright">
                   <a href="#" class="tm-footer-section-link tm-link-btn">Home</a>
                   <a href="#/services" class="tm-footer-section-link tm-link-btn">Services</a>
                   <a href="#/about" class="tm-footer-section-link tm-link-btn">About</a>
-                </div>
-                <div class = "tm-footer-section-tm container ">
+                  <a href="#/login" class="tm-footer-section-link tm-link-btn">Log In</a>
+                <span class = "tm-footer-section-tm">
                     <span class="tm-grey">Designed by</span> Elegant WordPress Themes | <span class="tm-grey">Powered by</span> WordPress
-                </div>
+                </span>
             </section>
     </footer>
   </div>

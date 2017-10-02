@@ -11,9 +11,11 @@ System.config({
    'localStorage': './scripts/local-storage.js',
    'homeController': './scripts/controllers/home-controller.js',
    'servicesController': './scripts/controllers/services-controller.js',   
-
+   'userController': './scripts/controllers/user-controller.js', 
+   'database':'./scripts/database.js',
 
    //models
+  'classUser': './scripts/models/User.js',
 
    // Library files
    'jquery': './libs/jquery.js',

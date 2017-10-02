@@ -1,0 +1,28 @@
+.tm-aside-container {
+  position: absolute;
+  right: 15%; }
+
+.tm-aside {
+  height: auto;
+  max-width: 260px;
+  position: relative; }
+
+@media all and (max-width: 768px) {
+  .tm-aside {
+    margin: 0 10px;
+    display: none; } }
+
+.tm-aside:first-child {
+  margin-top: 95px; }
+
+.tm-aside-heading {
+  font-size: 16px;
+  margin-left: 2%; }
+
+.tm-aside-body {
+  font-size: 10px;
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid #c5c5c5;
+  background: #ffffff;
+  background: linear-gradient(to bottom, #ffffff 60%, #f7f7f7 100%); }

@@ -1,0 +1,86 @@
+
+.main__quote__container {
+    margin-top: 55px;
+    margin-bottom: 115px;
+    border-top: 2px solid #d8d8d8;
+    border-bottom: 2px solid #d8d8d8;
+    width: 100%;
+    background-color: #fcfcfc;
+}
+
+.quote {
+    margin: 0 auto;
+    width: 100%;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    height: 160px;
+}
+
+@media all and (max-width: 1020px) {
+    .quote {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+@media all and (max-width: 960px) {
+    .quote {
+        height: 100%;
+        display:none;
+    }
+}
+
+.quote__body {
+    font-weight: lighter;
+}
+
+.quote__icon {
+    position: absolute;
+    left: 50%;
+    top: -15px;
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    width: 30px;
+    height: 30px;
+    line-height: 1.3;
+    color: #ffffff;
+    background-color: #d2d2d2;
+    border: 2px solid #b1b1b1;
+    border-radius: 50%;
+    font-family: 'Georgia', sans-serif;
+    font-size: 2.4em;
+}
+
+.quote__button {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    bottom: -28px;
+    display: inline-block;
+    padding: 12px 0;
+    width: 170px;
+    text-decoration: none;
+    font-family: 'Colaborate', sans-serif;
+    font-size: 1.6em;
+    font-weight: lighter;
+    color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    background: #323a43;
+    background: linear-gradient(to bottom, #323a43 0%, #1f262d 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#323a43', endColorstr='#1f262d', GradientType=0);
+}
+
+.quote__button:hover {
+    text-decoration: underline;
+}

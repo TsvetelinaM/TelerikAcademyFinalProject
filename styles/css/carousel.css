@@ -1,0 +1,212 @@
+.carrousel {
+    position: relative;
+    margin: 80px 0;
+}
+
+.carrousel__image {
+    display: block;
+    width: 20%;
+    height: 170px;
+    margin: 0 10px;
+    background: #1a2c33;
+}
+
+.carrousel__image>img {
+    width: 100%;
+    height: 100%;
+}
+
+.carrousel__image--center {
+    width: 500px;
+    height: 335px;
+}
+
+.carrousel__image--active {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    display: block;
+    z-index: 2;
+    width: 500px;
+    height: 335px;
+    background: #25575e;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    box-shadow: 0px 12px 8px 0px rgba(0, 0, 0, 0.75);
+}
+
+.shrink--right {
+    animation: transition .35s ease-out;
+}
+
+.grow--right {
+    animation: transition1 .35s ease-out;
+}
+
+.shrink--left {
+    animation: transition1 .35s ease-in;
+    animation-direction: reverse;
+}
+
+.grow--left {
+    animation: transition .35s ease-in;
+    animation-direction: reverse;
+}
+
+@keyframes transition {
+    0% {
+        margin-left: 10px;
+    }
+    100% {
+        margin-left: -19%;
+    }
+}
+
+@keyframes transition1 {
+    0% {
+        margin-right: -19%;
+    }
+    100% {
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .carrousel__image--active {
+        width: 100%;
+    }
+}
+
+.carrousel__image--active__overlay {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(37, 87, 94, 0.4);
+    transition: opacity 0.2s ease-in-out;
+}
+
+.carrousel__image__container {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.carrousel__arrow {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    color: #cccccc;
+    font-size: 2.5em;
+}
+
+.carrousel__arrow:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.carrousel__arrow:hover {
+    cursor: pointer;
+}
+
+.carrousel__arrow--left {
+    left: 20px;
+}
+
+.carrousel__arrow--right {
+    right: 20px;
+}
+
+.carrousel__icon {
+    position: relative;
+    margin: 0;
+    width: 40px;
+    height: 40px;
+    color: #cccccc;
+    font-size: 2.5em;
+}
+
+.carrousel__icon:hover {
+    cursor: pointer;
+}
+
+.carrousel__icon:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.carrousel__icon--open {
+    color: #cccccc;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.carrousel__icon--media {
+    margin-right: 20px;
+}
+
+.carrousel__icon__container {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.carrousel__title__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 55px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.85) 0%, transparent 80%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000', GradientType=1);
+}
+
+.carrousel__title {
+    margin: 0;
+    padding: 5px 20px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    color: #ffffff;
+}
+
+.carrousel__container {
+    width: 100%;
+    height: 320px;
+    margin-bottom: 5px;
+}

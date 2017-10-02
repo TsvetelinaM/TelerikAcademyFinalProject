@@ -18,3 +18,15 @@ function get(templateName) {
 }
 
 export { get }
+
+
+// function viewHandler(viewName, viewData) {
+//    const data = viewData || null;
+//    return $.get(`templates/${viewName}.handlebars`)
+//        .then((view) => {
+//            const template = Handlebars.compile(view);
+//            return template(data);
+//        });
+// }
+
+// export {viewHandler};

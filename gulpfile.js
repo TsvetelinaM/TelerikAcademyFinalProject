@@ -1,7 +1,6 @@
 const gulp = require('gulp');
 const webserver = require('gulp-webserver');
 const sass = require('gulp-sass');
-const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
 const cleanCSS = require('gulp-clean-css');
 const gutil = require('gulp-util');
@@ -25,16 +24,6 @@ gulp.task('styles', () => {
     gulp.watch('./styles/scss/**/*.scss', ['styles']);
 });
 
-// gulp.task('compile', () => {
-//     gulp.src('./public/scripts/**/*.js')
-//         .pipe(babel({
-//             presets: ['env'],
-//         }))
-//         .pipe(uglify())
-//         .on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
-//         .pipe(concat('all.min.js'))
-//         .pipe(gulp.dest('./build/scripts'));
-// });
 
 gulp.task('compile', () => {
     const builder = systemjsBuilder('./', './scripts/config/system-config.js');

@@ -2,18 +2,18 @@ import * as templates from 'templates';
 import 'bootstrap';
 import database from 'database';
 import $ from 'jquery';
-import User from 'classUser'
+import User from 'classUser';
 import toastr from 'toastr';
 
 function login(context) {
     templates.get('login').then((template) => {
         context.$element().html(template());
 
-        $('#tm-singlebutton-login').on('click',() => {
+        $('#tm-singlebutton-login-log').on('click',() => {
             $('form').submit((e) => { e.preventDefault(); });
             try {
-                let email = $('#tm-textinput-email').val();
-                let password = $('#tm-passwordinput-password').val();
+                const email = $('#tm-textinput-email-log').val();
+                const password = $('#tm-passwordinput-password-log').val();
                 database.signInUser(email, password)
                 .then(() => {
                     let userAuth = firebase.auth().currentUser;
@@ -39,10 +39,10 @@ function register(context) {
         $('#tm-singlebutton-login').on('click',() => {
             $('form').submit((e) => { e.preventDefault(); });
             try {
-                let username = $('#tm-textinput-username-log').val();
-                let email = $('#tm-textinput-email-log').val();
-                let password = $('#tm-passwordinput-password-log').val();
-                let newUser = new User(username, email,  password);
+                const username = $('#tm-textinput-username-log').val();
+                const email = $('#tm-textinput-email-log').val();
+                const password = $('#tm-passwordinput-password-log').val();
+                const newUser = new User(username, email,  password);
                 database.createUser(email, password, newUser)
                 .then(() => {
                     // console.log(localStorage.getItem('displayUser'));

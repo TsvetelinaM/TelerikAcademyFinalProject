@@ -35,6 +35,7 @@ const database = {
     signOut: () => {
         return firebase.auth().signOut()
     },
+    
     //Adding data to DB
     addJSONToDB: (ref, arr) => {
         arr.forEach(element => {
@@ -43,8 +44,8 @@ const database = {
     },
     
     // Getting information about the lists
-    getLists: ()  => {
-        return firebase.database().ref('lists/' + localStorage.uid).once('value');
+    getItems: (ref) => {
+        return firebase.database().ref(ref).once('value');
     },
     getSingleList: (key) => {
         return firebase.database().ref('lists/' + localStorage.uid + '/' + key).once('value');

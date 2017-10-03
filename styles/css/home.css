@@ -61,9 +61,10 @@
   list-style: none;
   padding: 5px;
   background-color: #ffffff; }
-  .tm-home-recent-work-item .tm-no-image {
-    width: 100%;
-    height: 100%;
-    box-shadow: inset 7px 7px 9px -7px rgba(0, 0, 0, 0.8);
-    background-color: #25575e;
-    border: 1px solid #ffffff; }
+
+.tm-no-image {
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 7px 7px 9px -7px rgba(0, 0, 0, 0.8);
+  background-color: #25575e;
+  border: 1px solid #ffffff; }

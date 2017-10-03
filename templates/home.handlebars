@@ -1,6 +1,7 @@
 <div class="carrousel__container">
     <div class="carrousel">
-        <div class="carrousel__image--active"><img src={{this.[1].imageUrl}} class="carrousel__image--center">
+        <div class="carrousel__image--active">
+            <img src={{this.[1].imageURL}} class="carrousel__image--center">
             <div class="carrousel__image--active__overlay"></div>
             <div class="carrousel__arrow carrousel__arrow--left glyphicon glyphicon-chevron-left"></div>
             <div class="carrousel__icon__container">
@@ -14,7 +15,7 @@
         </div>
         <div class="carrousel__image__container">
             {{#each this}}
-            <div class="carrousel__image"><img src={{this.imageUrl}}></div>
+            <div class="carrousel__image"><img src={{this.imageURL}}></div>
             {{/each}}
         </div>
     </div>

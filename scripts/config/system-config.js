@@ -12,6 +12,7 @@ System.config({
    'homeController': './scripts/controllers/home-controller.js',
    'servicesController': './scripts/controllers/services-controller.js',   
    'userController': './scripts/controllers/user-controller.js', 
+   'articleController': './scripts/controllers/articles-controller.js', 
    'database':'./scripts/database.js',
 
    //models
@@ -25,6 +26,11 @@ System.config({
    'cryptojs': './libs/crypto-js.js',
    'toastr': './libs/toastr.js',
    'bootstrap': './libs/bootstrap/dist/js/bootstrap.min.js'
- }
+ },
+ packages: {
+  '/': {
+      defaultExtension: 'js',
+  }
+},
 });
 

@@ -17,6 +17,15 @@ gulp.task('server', () => {
         }));
 });
 
+gulp.task('run', () => {
+    gulp.src('./build')
+        .pipe(webserver({
+            livereload: true,
+            open: true,
+            fallback: 'index.html',
+        }));
+});
+
 gulp.task('styles', () => {
     gulp.src('./styles/scss/**/*.scss')
         .pipe(sass().on('error', sass.logError))
@@ -39,12 +48,12 @@ gulp.task('clean', () => {
     gulp.src('./styles/css/**/*.css')
         .pipe(cleanCSS({ compatibility: 'ie8' }))
         .pipe(concat('style.min.css'))
-        .pipe(gulp.dest('./build/css'));
+        .pipe(gulp.dest('./styles/css'));
 });
 
 
 gulp.task('dev', ['styles', 'server']);
-gulp.task('build', ['compile', 'clean']);
+gulp.task('build', ['styles', 'compile', 'clean', 'run']);
 gulp.task('deploy', shell.task([
     // 'firebase deploy'
     'node -v'

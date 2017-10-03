@@ -3,7 +3,9 @@ import Sammy from 'sammy';
 import * as homeController from 'homeController';
 import * as servicesController from 'servicesController';
 import * as userController from 'userController';
+import * as articleController from 'articleController'
 import 'bootstrap';
+
 
 (() => {
     const app = Sammy('#main', (Sammy) => {
@@ -11,6 +13,7 @@ import 'bootstrap';
         Sammy.get('#/', homeController.all);
         Sammy.get('#/home', homeController.all);
         Sammy.get('#/services', servicesController.all);
+        Sammy.get('#/articles', articleController.all);
         Sammy.get('#/login', userController.login);
         Sammy.get('#/register', userController.register);
     });

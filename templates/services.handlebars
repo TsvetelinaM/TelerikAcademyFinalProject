@@ -2,25 +2,27 @@
 <div class="container-fluid tm-main-header">
 <p class="tm-main-header-content">Services</p>
 </div>
-<div class="container-fluid tm-main tm-hbox-wrap">
-    {{#each this}}
-    <article class="container tm-servise-container" >
-        <div class="tm-service-title">{{this.title}}</div>
-        <div class="tm-service-img">
-            {{#if this.imgUrl}}
-                <img src={{this.imgUrl}} alt="" class="tm-img">
-            {{else}}
-                <div class="tm-no-image"></div>
-            {{/if}}
-              <div class="tm-middle">
-                    <img src="./../styles/imgs/enlarge.png" alt="" >
-                    <img src="./../styles/imgs/zoom-in.png" alt="" >                    
-              </div>
-         </div>
-        <div class="tm-service-description">
-            {{this.content.[0]}}
-        </div>
-    </article>
-    {{/each}}
-
+<div class="container-fluid tm-main">
+    <div class="tm-main-path-name"><span class="tm-grey">Home >></span> Services</div>
+    <div class="tm-hbox-wrap">
+        {{#each this}}
+        <article class="container tm-servise-container" >
+            <div class="tm-service-title">{{this.title}}</div>
+            <div class="tm-service-img">
+                {{#if this.imgUrl}}
+                    <img src={{this.imgUrl}} alt="" class="tm-img">
+                {{else}}
+                    <div class="tm-no-image"></div>
+                {{/if}}
+                <div class="tm-middle">
+                        <img src="./../styles/imgs/enlarge.png" alt="" >
+                        <img src="./../styles/imgs/zoom-in.png" alt="" >                    
+                </div>
+            </div>
+            <div class="tm-service-description">
+                {{this.content.[0]}}
+            </div>
+        </article>
+        {{/each}}
+    </div>
 </div>

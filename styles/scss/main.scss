@@ -7,11 +7,6 @@ html {
     -webkit-text-size-adjust: 100%;
 }
 
-*,
-*:before,
-*:after {
-    box-sizing: inherit;
-}
 
 body {
     padding: 0;
@@ -27,6 +22,8 @@ body {
     font-family: sans-serif;
 }
 
+
+ 
 .tm-hbox {
     display: flex;
     flex-direction: row;
@@ -37,7 +34,7 @@ body {
     display: flex;
     align-items: stretch;
     flex-wrap: wrap;
-    // justify-content: space-between;
+    justify-content: space-between;
   }
 .tm-vbox {
     display: flex;
@@ -105,7 +102,7 @@ body {
     margin-bottom: 35px;
     .tm-envisioned {
         margin-left: 13px;
-        font-size: 36px;
+        font-size: 2.1em;
         font-family: "BlackJackRegular";
         color: rgb(255, 255, 255);
         line-height: 1;
@@ -289,10 +286,12 @@ main, #main {
 
   .tm-main-header{
     width: 100%;
-    height: 6.88em;
+    height: 108px;
     padding: 0 15% 0 15%;
     color: #ffffff;
-    font-size: 1.25em;
+    // font-size: 30px;
+    font-size: 1.8em;
+    font-family:'Colaborate-Regular';
     text-shadow: 1px 1px 2px #000000;
     display: table;
 }
@@ -317,4 +316,26 @@ main, #main {
  
 }
 
+.tm-main-path-name {
+    font-size: 12px;
+    font-family: "Droid Sans";
+    margin: 30px 0 50px 0;
+}
 
+@media all and (min-width: 1024px) {
+    body {
+        font-size: 100%;
+    }
+}
+
+@media all and (min-width: 640px) {
+    body {
+        font-size: 95%;
+    }
+}
+
+@media all and (min-width: 480px) {
+    body {
+        font-size: 87.5%;
+    }
+}

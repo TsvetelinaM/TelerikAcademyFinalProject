@@ -48,7 +48,7 @@ gulp.task('clean', () => {
     gulp.src('./styles/css/**/*.css')
         .pipe(cleanCSS({ compatibility: 'ie8' }))
         .pipe(concat('style.min.css'))
-        .pipe(gulp.dest('./styles/css'));
+        .pipe(gulp.dest('./build/styles/css'));
 });
 
 

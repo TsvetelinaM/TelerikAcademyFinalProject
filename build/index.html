@@ -7,7 +7,10 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>The Home of Аccounting</title>
   <link rel="shortcut icon" href="./services.ico" />
-  <link rel="stylesheet" href="./styles/style.min.css"> 
+  <link rel="stylesheet" href="./libs/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="./libs/toastr.css">
+  <link rel="stylesheet" href="./styles/fonts/fonts.css">
+  <link rel="stylesheet" href="./styles/css/style.min.css"> 
 </head>
 
 <body>
@@ -20,7 +23,7 @@
                 <div class="navbar-header col-lg-8">
                     <ul class="tm-nav tm-hbox">
                         <li class="tm-nav-item">
-                          <a class="tm-nav-link tm-link-btn" href="#">Home</a>
+                          <a class="tm-nav-link tm-link-btn" href="#/">Home</a>
                         </li>
                         <li class="tm-nav-item">
                           <a class="tm-nav-link tm-link-btn" href="#/services">Services</a>
@@ -39,6 +42,9 @@
                           </nav>
                         </li>
                         <li class="tm-nav-item">
+                          <a class="tm-nav-link tm-link-btn" href="#/articles">Articles</a>
+                        </li>
+                      <li class="tm-nav-item">
                           <a class="tm-nav-link tm-link-btn" href="#/about">About</a>
                         </li>
                         <li id="tm-btn-login" class="tm-nav-item">
@@ -47,7 +53,7 @@
                         <li id="tm-btn-signout" class="tm-nav-item tm-hidden">
                           <a class="tm-nav-link tm-link-btn" href="#/">Log Out</a>
                         </li>
-                      </ul>
+                        </ul>
                 </div>
             </nav>
     </header>
@@ -93,8 +99,9 @@
                 </div>
               </div>
             <section class="tm_footer_section_copyright">
-                  <a href="#" class="tm-footer-section-link tm-link-btn">Home</a>
+                  <a href="#/" class="tm-footer-section-link tm-link-btn">Home</a>
                   <a href="#/services" class="tm-footer-section-link tm-link-btn">Services</a>
+                  <a href="#/articles" class="tm-footer-section-link tm-link-btn">Articles</a>                  
                   <a href="#/about" class="tm-footer-section-link tm-link-btn">About</a>
                 <span class = "tm-footer-section-tm">
                     <span class="tm-grey">Designed by</span> Elegant WordPress Themes | <span class="tm-grey">Powered by</span> WordPress
@@ -105,7 +112,6 @@
 
   <script src="./libs/firebase.js"></script>
   <script src="./scripts/config/firebase_conf.js" charset="utf-8"></script>
-  <script src="./scripts/systemjs/dist/system.js"></script>
   <script src="./scripts/bundle.js"></script>
 </body>
 

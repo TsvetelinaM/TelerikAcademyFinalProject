@@ -8,31 +8,31 @@ import Article from 'classArticle';
 
 function all(context) {
     // const articlesArr = [
-    //     {author:'This is a test 1', date:'March 3, 2017', category:'accounting', title:'Accounting Issues to Watch', content:`Rhoncus quis, varius sed velit. 
+    //     {linkName:'test1', author:'This is a test 1', date:'March 3, 2017', category:'accounting', title:'Accounting Issues to Watch', content:`Rhoncus quis, varius sed velit. 
     //     Mauris quis nunc eu nunc molestie egestas et sit amet odio. Morbi lacinia velit in nibh sodales sed pharetra sem feugiat. Vivamus ut 
     //     cursus augue. Integer sit amet arcu lorem, at egestas tellus. Phasellus tellus orci, congue at tristique at,  mattis ut arcu. Donec dictum eros eu 
     //     felis laoreet egestas. Nullam adipiscing nibh id felis lacinia a iaculis nisi vestibulum. Ut sit amet urna enim, at accumsan quam. Nunc dui elit, hendrerit quis convallis sit amet,`, imgUrl:'./../../styles/imgs/accounting.jpg', comments:[]},
-    //     {author:'This is a test 2', date:'March 3, 2017', category:'accounting', title:'Accounting Issues to Watch', content:`Rhoncus quis, varius sed velit. 
+    //     {linkName:'test2', author:'This is a test 2', date:'March 3, 2017', category:'accounting', title:'Accounting Issues to Watch', content:`Rhoncus quis, varius sed velit. 
     //     Mauris quis nunc eu nunc molestie egestas et sit amet odio. Morbi lacinia velit in nibh sodales sed pharetra sem feugiat. Vivamus ut 
     //     cursus augue. Integer sit amet arcu lorem, at egestas tellus. Phasellus tellus orci, congue at tristique at,  mattis ut arcu. Donec dictum eros eu 
     //     felis laoreet egestas. Nullam adipiscing nibh id felis lacinia a iaculis nisi vestibulum. Ut sit amet urna enim, at accumsan quam. Nunc dui elit, hendrerit quis convallis sit amet,`, imgUrl:'./../../styles/imgs/accounting.jpg', comments:[]},
-    //     {author:'This is a test 3', date:'March 3, 2017', category:'accounting', title:'Accounting Issues to Watch', content:`Rhoncus quis, varius sed velit. 
+    //     {linkName:'test3', author:'This is a test 3', date:'March 3, 2017', category:'accounting', title:'Accounting Issues to Watch', content:`Rhoncus quis, varius sed velit. 
     //     Mauris quis nunc eu nunc molestie egestas et sit amet odio. Morbi lacinia velit in nibh sodales sed pharetra sem feugiat. Vivamus ut 
     //     cursus augue. Integer sit amet arcu lorem, at egestas tellus. Phasellus tellus orci, congue at tristique at,  mattis ut arcu. Donec dictum eros eu 
     //     felis laoreet egestas. Nullam adipiscing nibh id felis lacinia a iaculis nisi vestibulum. Ut sit amet urna enim, at accumsan quam. Nunc dui elit, hendrerit quis convallis sit amet,`, imgUrl:'./../../styles/imgs/accounting.jpg', comments:[]},
-    //     {author:'This is a test 4', date:'March 3, 2017', category:'accounting', title:'Accounting Issues to Watch', content:`Rhoncus quis, varius sed velit. 
+    //     {linkName:'test4', author:'This is a test 4', date:'March 3, 2017', category:'accounting', title:'Accounting Issues to Watch', content:`Rhoncus quis, varius sed velit. 
     //     Mauris quis nunc eu nunc molestie egestas et sit amet odio. Morbi lacinia velit in nibh sodales sed pharetra sem feugiat. Vivamus ut 
     //     cursus augue. Integer sit amet arcu lorem, at egestas tellus. Phasellus tellus orci, congue at tristique at,  mattis ut arcu. Donec dictum eros eu 
     //     felis laoreet egestas. Nullam adipiscing nibh id felis lacinia a iaculis nisi vestibulum. Ut sit amet urna enim, at accumsan quam. Nunc dui elit, hendrerit quis convallis sit amet,`, imgUrl:'./../../styles/imgs/accounting.jpg', comments:[]},
-    //     {author:'This is a test 5', date:'March 3, 2017', category:'accounting', title:'Accounting Issues to Watch', content:`Rhoncus quis, varius sed velit. 
+    //     {linkName:'test5', author:'This is a test 5', date:'March 3, 2017', category:'accounting', title:'Accounting Issues to Watch', content:`Rhoncus quis, varius sed velit. 
     //     Mauris quis nunc eu nunc molestie egestas et sit amet odio. Morbi lacinia velit in nibh sodales sed pharetra sem feugiat. Vivamus ut 
     //     cursus augue. Integer sit amet arcu lorem, at egestas tellus. Phasellus tellus orci, congue at tristique at,  mattis ut arcu. Donec dictum eros eu 
     //     felis laoreet egestas. Nullam adipiscing nibh id felis lacinia a iaculis nisi vestibulum. Ut sit amet urna enim, at accumsan quam. Nunc dui elit, hendrerit quis convallis sit amet,`, imgUrl:'./../../styles/imgs/accounting.jpg', comments:[]},
-    //     {author:'This is a test 6', date:'March 3, 2017', category:'accounting', title:'Accounting Issues to Watch', content:`Rhoncus quis, varius sed velit. 
+    //     {linkName:'test6', author:'This is a test 6', date:'March 3, 2017', category:'accounting', title:'Accounting Issues to Watch', content:`Rhoncus quis, varius sed velit. 
     //     Mauris quis nunc eu nunc molestie egestas et sit amet odio. Morbi lacinia velit in nibh sodales sed pharetra sem feugiat. Vivamus ut 
     //     cursus augue. Integer sit amet arcu lorem, at egestas tellus. Phasellus tellus orci, congue at tristique at,  mattis ut arcu. Donec dictum eros eu 
     //     felis laoreet egestas. Nullam adipiscing nibh id felis lacinia a iaculis nisi vestibulum. Ut sit amet urna enim, at accumsan quam. Nunc dui elit, hendrerit quis convallis sit amet,`, imgUrl:'./../../styles/imgs/accounting.jpg', comments:[]},
-    //     {author:'This is a test 7', date:'March 3, 2017', category:'accounting', title:'Accounting Issues to Watch', content:`Rhoncus quis, varius sed velit. 
+    //     {linkName:'test7', author:'This is a test 7', date:'March 3, 2017', category:'accounting', title:'Accounting Issues to Watch', content:`Rhoncus quis, varius sed velit. 
     //     Mauris quis nunc eu nunc molestie egestas et sit amet odio. Morbi lacinia velit in nibh sodales sed pharetra sem feugiat. Vivamus ut 
     //     cursus augue. Integer sit amet arcu lorem, at egestas tellus. Phasellus tellus orci, congue at tristique at,  mattis ut arcu. Donec dictum eros eu 
     //     felis laoreet egestas. Nullam adipiscing nibh id felis lacinia a iaculis nisi vestibulum. Ut sit amet urna enim, at accumsan quam. Nunc dui elit, hendrerit quis convallis sit amet,`, imgUrl:'./../../styles/imgs/accounting.jpg', comments:[]}
@@ -46,14 +46,39 @@ function all(context) {
         for (let i=articlesUid.length-1, y=1; i>=0; i--, y++) {
             let currentArticleUid = articlesUid[i] 
             articlesItems.push(articles.val()[currentArticleUid]);
-            pageIndex.push(y);
-        }
-        console.log(articlesItems);
-        console.log(pageIndex);
-        const templateData = {activePage:1, pageCount: pageIndex[pageIndex.length-1], pageIndex: pageIndex, articlesItems: articlesItems};
+            if (y<=articlesUid.length/2+1) {
+                pageIndex.push(y);
+            }
+        };
+        const templateData = {activePage:1, pageCount: pageIndex[pageIndex.length-1], pageIndex: pageIndex.slice(1), articlesItems: [articlesItems[0], articlesItems[1]]};
         templates.get('articles').then((template) => {
             context.$element().html(template(templateData));
+            let $activePage = $('.tm-active-page');
+            $('.pagination').on('click', (ev) => {
+                if (ev.target.nodeName === 'BUTTON') {
+                    $activePage.removeClass('tm-active-page');
+                    let $currentPage = $(ev.target);
+                    $currentPage.addClass('tm-active-page');
+                    $activePage =  $('.tm-active-page');
+                    let $currentPageNumber = $currentPage.html();
+
+                    console.log($currentPageNumber);
+
+                    $('.tm-active-page-info').html($currentPageNumber);
+                    let currentPageArticles ='';
+                    for (let i = (+$currentPageNumber-1)*2; i <= (+$currentPageNumber-1)*2 + 1; i++ ) {
+                        if (articlesItems[i]) {
+                            currentPageArticles+=`<div class="tm-article-main col-xs-12 col-md-8">
+                            <h2>${articlesItems[i].title}</h2>
+                            <div>Posted by ${articlesItems[i].author}</div>
+                            </div>` 
+                        }
+                    }
+                    $('.tm-current-articles-container').html(currentPageArticles);
+                }
+            })
         });
+
     })
 
 }

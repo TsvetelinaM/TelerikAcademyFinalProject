@@ -55,6 +55,5 @@ gulp.task('clean', () => {
 gulp.task('dev', ['styles', 'server']);
 gulp.task('build', ['styles', 'compile', 'clean', 'run']);
 gulp.task('deploy', shell.task([
-    // 'firebase deploy'
-    'node -v'
+    'firebase deploy'
 ]))

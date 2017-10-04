@@ -40,6 +40,7 @@ function all(context) {
     // database.addJSONToDB('articles', articlesArr);
     database.getItems('articles')
     .then((articles) => {
+
         let articlesUid = Object.keys(articles.val());
         let articlesItems = [];
         let pageIndex = [];

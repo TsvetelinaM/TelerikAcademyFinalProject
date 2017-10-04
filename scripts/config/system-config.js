@@ -16,7 +16,8 @@ System.config({
    'database':'./scripts/database.js',
 
    //models
-  'classUser': './scripts/models/User.js',
+  'classUser': './scripts/models/user.js',
+  'classArticle': './scripts/models/article.js',
 
    // Library files
    'jquery': './libs/jquery.js',

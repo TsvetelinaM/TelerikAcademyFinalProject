@@ -46,21 +46,24 @@ const database = {
     // Getting information about the lists
     getItems: (ref) => {
         return firebase.database().ref(ref).once('value');
-    },
-    getSingleList: (key) => {
-        return firebase.database().ref('lists/' + localStorage.uid + '/' + key).once('value');
-    },
-    pushList: (list) => {
-      return   firebase.database()
-            .ref('lists/' + localStorage.uid)
-            .push(list);
+    }
 
-    },
-    removeList: (listKey) => {
-        return firebase.database()
-            .ref('lists/' + localStorage.uid + '/' + listKey)
-            .remove();
-    },
+
+    
+    // getSingleList: (key) => {
+    //     return firebase.database().ref('lists/' + localStorage.uid + '/' + key).once('value');
+    // },
+    // pushList: (list) => {
+    //   return   firebase.database()
+    //         .ref('lists/' + localStorage.uid)
+    //         .push(list);
+
+    // },
+    // removeList: (listKey) => {
+    //     return firebase.database()
+    //         .ref('lists/' + localStorage.uid + '/' + listKey)
+    //         .remove();
+    // },
     // Getting information about items
     // getItem: function (listKey, itemKey) {
     //     return firebase.database()

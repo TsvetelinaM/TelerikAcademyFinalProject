@@ -43,4 +43,12 @@
                 </div>
             </aside>
         </div>
+        <div class="container">
+            <ul class="pagination">
+                Page {{this.activePage}} of {{this.pageCount}}
+                {{#each this.pageIndex}}
+                <li><button>{{this}}</button></li>
+                {{/each}}
+            </ul>
+        </div>
 </div>

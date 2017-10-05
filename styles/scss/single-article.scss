@@ -1,0 +1,28 @@
+.dialog{
+    position:relative;
+    margin:50px auto;
+    width:300px;
+    height:50px;
+    border:2px solid #c5c5c5;
+    border-radius:7px; 
+  }
+  
+  .top-bot{
+    position:absolute;
+    left:-20px;
+    bottom:20px;
+    width:0;
+    height:0;
+    border-width:10px;
+    border-style:solid;
+    background-color: #ffffff;
+    border-color:transparent #c5c5c5 transparent transparent; 
+  }
+  .top-bot-border{
+    left:-18px;
+    border-color:transparent #fff transparent transparent; 
+    
+  }
+  .dialog-content{
+    text-align:center;
+  }

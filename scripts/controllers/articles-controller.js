@@ -6,7 +6,7 @@ import $ from 'jquery';
 import toastr from 'toastr';
 import Article from 'classArticle';
 
-function all(context) {
+function getAllArticles(context) {
     // const articlesArr = [
     //     {linkName:'test1', author:'This is a test 1', date:'March 3, 2017', category:'accounting', title:'Accounting Issues to Watch', content:`Rhoncus quis, varius sed velit. 
     //     Mauris quis nunc eu nunc molestie egestas et sit amet odio. Morbi lacinia velit in nibh sodales sed pharetra sem feugiat. Vivamus ut 
@@ -69,10 +69,29 @@ function all(context) {
                     let currentPageArticles ='';
                     for (let i = (+$currentPageNumber-1)*2; i <= (+$currentPageNumber-1)*2 + 1; i++ ) {
                         if (articlesItems[i]) {
+                            let commentsCounter = 0
+                            if (articlesItems[i].comments) {
+                                commentsCounter = articlesItems[i].comments.length
+                            }
                             currentPageArticles+=`<div class="tm-article-main col-xs-12 col-md-8">
-                            <h2>${articlesItems[i].title}</h2>
-                            <div>Posted by ${articlesItems[i].author}</div>
-                            </div>` 
+                                                    <h2 class="tm-article-title">${articlesItems[i].title}</h2>
+                                                    <div class="tm-article-posted-by">Posted by ${articlesItems[i].author} on ${articlesItems[i].date} in ${articlesItems[i].category} | ${commentsCounter} Comments</div>
+                                                    <div class="container tm-hbox tm-article-main-part-container">
+                                                        <div class="col-md-4 tm-article-img">
+                                                            <img src=${articlesItems[i].imgUrl} alt="" class="tm-img">
+                                                            <div class="tm-middle">
+                                                                <img src="./../styles/imgs/enlarge.png" alt="" >
+                                                                <img src="./../styles/imgs/zoom-in.png" alt="" >                    
+                                                            </div>
+                                                        </div>
+                                                        <div class="container tm-article-content-container col-md-8">
+                                                            ${articlesItems[i].content}
+                                                        </div>
+                                                    </div>
+                                                    <div class="tm-article-btn tm-active-page">
+                                                        <a href="#/articles/${articlesItems[i].linkName}">Read More</a>
+                                                    </div>
+                                                </div>`
                         }
                     }
                     $('.tm-current-articles-container').html(currentPageArticles);
@@ -84,4 +103,28 @@ function all(context) {
 
 }
 
-export { all };
+function getSingleArticle(context) {
+    database.getItems('articles')
+    .then((articles) => {
+        const currentArticleName = this.params['name'];
+        let articlesItems = [];
+        let articlesUid = Object.keys(articles.val());
+        
+        for (let i=articlesUid.length-1, y=1; i>=0; i--, y++) {
+            let currentArticleUid = articlesUid[i];
+            
+            articlesItems.push(articles.val()[currentArticleUid]);
+        };
+        const currentArticle = articlesItems.filter((article) => article.linkName === currentArticleName);
+        const templateData = {currentArticleName:currentArticleName, currentArticle: currentArticle};
+        
+        templates.get('single_article').then((template) => {
+            context.$element().html(template(templateData));
+
+        });
+
+    })
+
+}
+
+export { getAllArticles, getSingleArticle };

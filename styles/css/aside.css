@@ -7,13 +7,14 @@
   max-width: 260px;
   position: relative; }
 
+@media all and (max-width: 1024px) {
+  .tm-aside {
+    max-width: 180px; } }
+
 @media all and (max-width: 768px) {
   .tm-aside {
     margin: 0 10px;
     display: none; } }
-
-.tm-aside:first-child {
-  margin-top: 95px; }
 
 .tm-aside-heading {
   font-size: 16px;

@@ -261,7 +261,7 @@ main, #main {
 .tm-main-path-name {
   font-size: 12px;
   font-family: "Droid Sans";
-  margin: 30px 0 50px 0; }
+  margin: 25px 0 30px 0; }
 
 @media all and (min-width: 1024px) {
   body {

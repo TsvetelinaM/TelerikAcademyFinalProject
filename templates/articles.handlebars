@@ -44,34 +44,35 @@
             </aside>
         </div>
         <div class="container tm-current-articles-container">
-        {{#each this.articlesItems}}
-            <div class="tm-article-main col-xs-12 col-md-8">
-                <h2>{{this.title}}</h2>
-                <div>Posted by {{this.author}} on {{this.date}} in {{this.category}} | {{#if this.comments}} {{this.comments.length}} {{else}} 0 {{/if}} Comments</div>
-                <div class="container tm-hbox">
-                    {{#if this.imgUrl}}
-                    <img src={{this.imgUrl}} alt="" class="tm-img">
-                    {{else}}
-                    <div class="tm-no-image"></div>
-                    {{/if}}
-                    <div class="tm-middle">
-                        <img src="./../styles/imgs/enlarge.png" alt="" >
-                        <img src="./../styles/imgs/zoom-in.png" alt="" >                    
+            {{#each this.articlesItems}}
+                <div class="tm-article-main col-xs-12 col-md-8">
+                    <h2 class="tm-article-title">{{this.title}}</h2>
+                    <div class="tm-article-posted-by">Posted by {{this.author}} on {{this.date}} in {{this.category}} | {{#if this.comments}} {{this.comments.length}} {{else}} 0 {{/if}} Comments</div>
+                    <div class="container tm-hbox tm-article-main-part-container">
+                        <div class="col-md-4 tm-article-img">
+                            {{#if this.imgUrl}}
+                            <img src={{this.imgUrl}} alt="" class="tm-img">
+                            {{else}}
+                            <div class="tm-no-image"></div>
+                            {{/if}}
+                            <div class="tm-middle">
+                                <img src="./../styles/imgs/enlarge.png" alt="" >
+                                <img src="./../styles/imgs/zoom-in.png" alt="" >                    
+                            </div>
+                        </div>
+                        <div class="container tm-article-content-container col-md-8">
+                            {{this.content}}
+                        </div>
                     </div>
-                    <div>
-                        {{this.content}}
+                    <div class="tm-article-btn tm-active-page">
+                        <a href="#/articles/{{this.linkName}}">Read More</a>
                     </div>
                 </div>
-                <div>
-                    <a href="#/articles/{{this.linkName}}">Read More</a>
-                </div>
-            </div>
-        {{/each}}
+            {{/each}}
         </div>
-
-        <div class="container">
+        <div class="container tm-pagination-container">
             <ul class="pagination">
-                Page <span class="tm-active-page-info">{{this.activePage}}</span> of {{this.pageCount}}
+                <span class="tm-page-counter">Page <span class="tm-active-page-info">{{this.activePage}}</span> of {{this.pageCount}}</span>
                 <li><button class = "tm-pagination-btn tm-active-page">1</button></li>
                 {{#each this.pageIndex}}
                 <li><button class="tm-pagination-btn">{{this}}</button></li>

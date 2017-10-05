@@ -13,9 +13,10 @@ import 'bootstrap';
         Sammy.get('#/', homeController.all);
         Sammy.get('#/home', homeController.all);
         Sammy.get('#/services', servicesController.all);
-        Sammy.get('#/articles', articleController.all);
+        Sammy.get('#/articles', articleController.getAllArticles);
         Sammy.get('#/login', userController.login);
         Sammy.get('#/register', userController.register);
+        Sammy.get('#/articles/:name', articleController.getSingleArticle);
     });
 
 

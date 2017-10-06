@@ -20,7 +20,8 @@ System.config({
    //models
   'classUser': 'scripts/models/user.js',
   'classArticle': 'scripts/models/article.js',
-
+  'classComment': 'scripts/models/comment.js',
+  
    // Library files
    'jquery': 'libs/jquery.js',
    'jqueryUI': 'libs/jquery-ui.js',

@@ -35,7 +35,7 @@ function getAllArticles(context) {
     //     {linkName:'test7', author:'This is a test 7', date:'March 3, 2017', category:'accounting', title:'Accounting Issues to Watch', content:`Rhoncus quis, varius sed velit. 
     //     Mauris quis nunc eu nunc molestie egestas et sit amet odio. Morbi lacinia velit in nibh sodales sed pharetra sem feugiat. Vivamus ut 
     //     cursus augue. Integer sit amet arcu lorem, at egestas tellus. Phasellus tellus orci, congue at tristique at,  mattis ut arcu. Donec dictum eros eu 
-    //     felis laoreet egestas. Nullam adipiscing nibh id felis lacinia a iaculis nisi vestibulum. Ut sit amet urna enim, at accumsan quam. Nunc dui elit, hendrerit quis convallis sit amet,`, imgUrl:'./../../styles/imgs/accounting.jpg', comments:[]}
+    //     felis laoreet egestas. Nullam adipiscing nibh id felis lacinia a iaculis nisi vestibulum. Ut sit amet urna enim, at accumsan quam. Nunc dui elit, hendrerit quis convallis sit amet,`, imgUrl:'./../../styles/imgs/accounting.jpg', comments:[{author:'test01',date:'02-10-2017', comment:'felis laoreet egestas. Nullam adipiscing nibh id felis lacinia a iaculis nisi vestibulum. Ut sit amet urna enim, at accumsan quam. Nunc dui elit, hendrerit quis convallis sit amet,', answers:[]}]}
     // ]
     // database.addJSONToDB('articles', articlesArr);
     database.getItems('articles')

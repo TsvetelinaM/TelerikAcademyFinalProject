@@ -65,9 +65,10 @@
                     </div>
                 </div>
         </div>
-        <div class="dialog">
-        <span class="top-bot"></span>
-        <span class="top-bot top-bot-border"></span>
-        <p class="dialog-content">I am a dialog with border.</p>
+        <div class="container tm-comments-counter tm-Colaborate-30px">{{#if this.currentArticle.[0].comments}} {{this.currentArticle.[0].comments.length}} {{else}} 0 {{/if}}Comments</div>
+        <div class="tm-dialog">
+        <span class="tm-top-bot"></span>
+        <span class="tm-top-bot tm-top-bot-border"></span>
+        <p class="tm-dialog-content">I am a dialog with border.</p>
         </div>
 </div>

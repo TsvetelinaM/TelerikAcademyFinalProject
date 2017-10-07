@@ -97,17 +97,19 @@ body {
     background-color: inherit;
     margin: 0 15% 0 15%;
     padding-top: 65px;
+    border: 1px solid red;
 }
 .navbar-default {
     background-color: inherit;
 }
 .navbar-brand {
+    border: 1px solid red;
     margin-bottom: 35px;
     .tm-envisioned {
         margin-left: 13px;
         font-size: 2.1em;
         font-family: "BlackJackRegular";
-        color: rgb(255, 255, 255);
+        color: #ffffff;
         line-height: 1;
         text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.004);
         position: relative;
@@ -209,6 +211,117 @@ main, #main {
     padding:0px;
 }
 
+.tm-img-container {
+    border:1px solid #dadada;
+    position: relative;
+    padding: 5px;
+    background-color: #ffffff;
+}
+
+
+.tm-img {
+    position:relative;
+    width:100%;
+    height:100%;
+    object-fit: contain;
+    border: none;
+}
+
+
+.container:hover .tm-img-lower-opacity {
+    opacity: 0.5;
+    transition: .5s ease;
+}
+
+.tm-no-image{
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 7px 7px 9px -7px rgba(0,0,0,0.8);
+    background-color: #25575e;
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    z-index: 6;
+}
+.tm-img-shadow-container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+}
+.tm-img-shadow{
+    // background-color: #25575e;
+    background-color: transparent;
+    // border: 1px solid #ffffff;
+    z-index: 6;
+    float: left;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 7px 7px 9px -7px rgba(0,0,0,0.8);
+    
+}
+
+.tm-gradient-grey-color {
+    border-width: 1px;
+    border-style: solid;
+    -webkit-border-bottom-image: 
+      -webkit-gradient(linear, 100% 0, 0 0, from(#e1e1e1), to(grey))  1 1 100% 1;
+    -webkit-border-image: 
+      -webkit-linear-gradient(right, transparent, #cdcdcd 3%, transparent 60%) 1 1 100% 1;
+    -moz-border-image:
+      -moz-linear-gradient(right, transparent, #cdcdcd 3%, transparent 60%) 1 1 100% 1;  
+    -o-border-image:
+      -o-linear-gradient(right, transparent, #cdcdcd 3%, transparent 60%)  1 1 100% 1;
+    border-image:
+      linear-gradient(to right, transparent, #cdcdcd 3%, transparent 60%) 0 0 100% 0;
+
+}
+.tm-gradient-white-color {
+border-width: 1px;
+border-style: solid;
+-webkit-border-bottom-image: 
+    -webkit-gradient(linear, 100% 0, 0 0, from(#fff), to(grey))  100% 0 0 0;
+-webkit-border-image: 
+    -webkit-linear-gradient(right, transparent, #fff 3%, transparent 60%) 100% 0 0 0;
+-moz-border-image:
+    -moz-linear-gradient(right, transparent, #fff 3%, transparent 60%) 100% 0 0 0;  
+-o-border-image:
+    -o-linear-gradient(right, transparent, #fff 3%, transparent 60%)  100% 0 0 0;
+border-image:
+    linear-gradient(to right, transparent, #fff 3%, transparent 60%) 100% 0 0 0;
+}
+
+.tm-gradient-grey-color-left {
+    border-width: 1px;
+    border-style: solid;
+    -webkit-border-bottom-image: 
+      -webkit-gradient(linear, 100% 0, 0 0, from(#e1e1e1), to(grey))  1 1 100% 1;
+    -webkit-border-image: 
+      -webkit-linear-gradient(left, transparent, #cdcdcd 3%, transparent 90%) 1 1 100% 1;
+    -moz-border-image:
+      -moz-linear-gradient(left, transparent, #cdcdcd 3%, transparent 90%) 1 1 100% 1;  
+    -o-border-image:
+      -o-linear-gradient(left, transparent, #cdcdcd 3%, transparent 90%)  1 1 100% 1;
+    border-image:
+      linear-gradient(to left, transparent, #cdcdcd 3%, transparent 90%) 0 0 100% 0;
+
+}
+.tm-gradient-white-color-left {
+border-width: 1px;
+border-style: solid;
+-webkit-border-bottom-image: 
+    -webkit-gradient(linear, 100% 0, 0 0, from(#fff), to(grey))  100% 0 0 0;
+-webkit-border-image: 
+    -webkit-linear-gradient(left, transparent, #fff 3%, transparent 90%) 100% 0 0 0;
+-moz-border-image:
+    -moz-linear-gradient(left, transparent, #fff 3%, transparent 90%) 100% 0 0 0;  
+-o-border-image:
+    -o-linear-gradient(left, transparent, #fff 3%, transparent 90%)  100% 0 0 0;
+border-image:
+    linear-gradient(to left, transparent, #fff 3%, transparent 90%) 100% 0 0 0;
+}
 
 //FOOTER:
 
@@ -322,7 +435,7 @@ main, #main {
 .tm-main-path-name {
     font-size: 12px;
     font-family: "Droid Sans";
-    margin: 25px 0 30px 0;
+    padding: 25px 0 30px 0;
 }
 
 @media all and (min-width: 1024px) {

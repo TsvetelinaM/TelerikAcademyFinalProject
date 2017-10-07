@@ -1,8 +1,9 @@
 .tm-current-articles-container {
     position: relative;
-    width: 65%;
+    width: 60%;
     margin:0px;
     padding: 0px;
+    padding-bottom: 35px;
 }
 
 .tm-article-main, .tm-article-main-part-container{
@@ -31,11 +32,8 @@
     margin:0px;
 }
 
+
 .tm-article-img{
-    border:1px solid #dadada;
-    position: relative;
-    padding: 6px;
-    background-color: #ffffff;
     width: 220px;
     height: 220px;
 }
@@ -74,10 +72,11 @@
 
 .tm-pagination-container {
     position: relative;
-    width: 65%;
+    width: 60%;
+    height:auto;
     margin:0px;
-    padding: 0px;
 }
+
 .pagination {
     position: absolute;
     right: 0px;
@@ -112,10 +111,16 @@
     .tm-current-articles-container {
         width: 50%;
     }
+    .tm-pagination-container {
+        width: 50%;
+    }
 }
 
 @media all and (max-width: 768px) {
     .tm-current-articles-container {
+        width: 100%;
+    }
+    .tm-pagination-container {
         width: 100%;
     }
     .container .tm-article-main-part-container {

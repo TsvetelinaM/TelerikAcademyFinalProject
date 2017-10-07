@@ -1,18 +1,43 @@
-.tm-comments-counter {
-  position: relative;
+.tm-comments-container {
   width: 685px;
+  margin: 0px;
+  padding: 0px; }
+
+.tm-comments-counter {
+  width: 100%;
+  position: relative;
   padding: 90px 0 20px 0;
-  border: 1px solid red;
   margin: 0px; }
+
+.tm-comment-dialog-container {
+  width: 100%;
+  padding: 30px 0 0 5px; }
+
+.tm-comment-img-date-container {
+  position: relative; }
+
+.tm-comment-img {
+  width: 65px;
+  height: 65px; }
+
+.tm-comment-date {
+  padding-top: 12px;
+  font-size: 11px;
+  font-family: 'Droid Sans';
+  color: #838383;
+  text-align: right; }
+
+.tm-dialog-container {
+  padding: 0 75px 0 15px; }
 
 .tm-dialog {
   margin: 0px;
   position: relative;
-  margin: 50px auto;
   min-height: auto;
   border: 1px solid #c5c5c5;
   border-radius: 7px;
-  background-color: #ffffff; }
+  background-color: #ffffff;
+  padding: 30px; }
 
 .tm-top-bot {
   position: absolute;
@@ -29,4 +54,40 @@
   border-color: transparent #fff transparent transparent; }
 
 .tm-dialog-content {
-  text-align: center; }
+  margin: 0px;
+  position: relative;
+  height: auto; }
+
+.tm-comment-author {
+  display: block;
+  font-size: 24px;
+  font-family: 'Colaborate-Regular';
+  color: #1f262d; }
+
+.tm-comment-content {
+  font-size: 12px;
+  font-family: 'Droid Sans';
+  color: #5e5e5e;
+  display: block; }
+
+.tm-comment-btn {
+  display: block;
+  font-size: 12px;
+  font-family: 'Droid Sans';
+  position: relative;
+  margin-left: auto;
+  margin-right: 0; }
+
+.tm-leave-a-comment-container {
+  width: 100%;
+  padding: 50px 0 0 0; }
+
+.tm-comments-label {
+  margin: 0px;
+  width: 100%;
+  font-size: 30px;
+  font-family: 'Colaborate-Thin';
+  padding-bottom: 10px; }
+
+.tm-comments-input {
+  width: 100%; }

@@ -1,7 +1,7 @@
 <div class="tm-carrousel-container">
     <div class="tm-carrousel">
         <div class=" tm-carousel-shadow tm-carrousel-image-active ">
-            <img src={{this.[0].imageURL}} class="tm-carrousel-image-center">
+            <img src={{this.imagesArray.[0].imageURL}} class="tm-carrousel-image-center">
             <div class="tm-carrousel-image-active-overlay"></div>
             <div class="tm-carrousel-arrow tm-carrousel-arrow-left glyphicon glyphicon-chevron-left"></div>
             <div class="tm-carrousel-icon-container">
@@ -9,12 +9,12 @@
                 <a class="tm-carrousel-icon tm-carrousel-icon-open glyphicon glyphicon-zoom-in"></a>
             </div>
                 <div class="tm-carrousel-title-overlay">
-                    <h4 class="tm-carrousel-title">{{this.[0].title}}</h4>
+                    <h4 class="tm-carrousel-title">{{this.imagesArray.[0].title}}</h4>
                 </div>
             <div class="tm-carrousel-arrow tm-carrousel-arrow-right glyphicon glyphicon-chevron-right"></div>
         </div>
         <div class="tm-carrousel-image-container">
-            {{#each this}}
+            {{#each this.imagesArray}}
             <div class="tm-carrousel-image"><img src={{this.imageURL}}></div>
             {{/each}}
         </div>
@@ -22,7 +22,7 @@
 </div>
 <div class="container-fluid tm-home-main ">
     <section  class = "tm-home-info">
-        <ul class = "tm-hbox">
+        <ul class = "tm-hbox tm-home-info-ul">
             <li>
                 <div class = "tm-home-section-h6">
                 <img src="./styles/imgs/services.png" alt="">
@@ -77,7 +77,7 @@
     </section>
 
 
-    <section class="tm-home-recent-work">
+    {{!-- <section class="tm-home-recent-work">
         <ul class="tm-hbox">
             <li class="tm-home-recent-work-item">
                 <div class="tm-no-image">
@@ -85,8 +85,24 @@
                 </div>
             </li>
         </ul>
-    </section>
-
+    </section> --}}
+    <div class="tm-hbox-wrap tm-home-recent-work">
+        {{#each this.services}}
+        <article class="container tm-home-recent-work-item" >
+            <div class="container tm-service-img">
+                {{#if this.imgUrl}}
+                    <img src={{this.imgUrl}} alt="" class="tm-img tm-img-lower-opacity">
+                {{else}}
+                    <div class="tm-no-image"></div>
+                {{/if}}
+                <div class="tm-middle">
+                        <img src="./../styles/imgs/enlarge.png" alt="" >
+                        <img src="./../styles/imgs/zoom-in.png" alt="" >                    
+                </div>
+            </div>
+        </article>
+        {{/each}}
+    </div>
 </div>
 
 

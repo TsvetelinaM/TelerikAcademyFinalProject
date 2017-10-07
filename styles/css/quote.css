@@ -33,9 +33,11 @@
 }
 
 @media all and (max-width: 960px) {
+    .main__quote__container {
+        display:none;
+    }
     .quote {
         height: 100%;
-        display:none;
     }
 }
 

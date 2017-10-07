@@ -22,6 +22,12 @@ import 'bootstrap';
 
     // Start application
     $(() => {
+        $('.tm-responsive-nav').on('click',()=>{
+            $('.tm-nav-dropdown').toggleClass('tm-hidden');
+            $('.tm-nav-dropdown').on('click', ()=>{
+                $('.tm-nav-dropdown').toggleClass('tm-hidden');
+            })
+        })
         firebase.auth().onAuthStateChanged((user) => {
             if (localStorage.displayUser) {
                 // User is signed in.

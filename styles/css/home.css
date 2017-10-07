@@ -21,11 +21,11 @@
   list-style: none; }
 
 .tm-home-section-h6 {
-  font-size: 17px;
-  font-family: Colaborate-Regular; }
+  font-size: 24px;
+  font-family: Colaborate-Thin; }
 
 .tm-home-section-p {
-  font-size: 9px;
+  font-size: 12px;
   margin-left: 45px; }
 
 .tm-home-section-button {
@@ -45,7 +45,7 @@
 
 /*Recent work*/
 .tm-home-recent-work {
-  width: 100%;
+  width: 70%;
   padding: 0 15% 0 15%; }
 
 .tm-home-recent-work ul {
@@ -60,3 +60,22 @@
   list-style: none;
   padding: 5px;
   background-color: #ffffff; }
+
+@media all and (max-width: 1024px) {
+  body {
+    font-size: 100%; } }
+
+@media all and (max-width: 640px) {
+  body {
+    font-size: 95%; }
+  .tm-home-info {
+    width: 100%;
+    padding: 0 5%;
+    margin-top: 8%; }
+  .tm-home-info-ul {
+    display: block;
+    margin: 0;
+    padding: 0; }
+  .tm-home-info-ul li {
+    margin-bottom: 45px;
+    text-align: justify; } }

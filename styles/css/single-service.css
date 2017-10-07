@@ -1,0 +1,16 @@
+.tm-main-single-service {
+  height: 700px; }
+
+.tm-current-service-container {
+  padding-top: 45px; }
+
+.tm-service-img {
+  margin-bottom: 20px; }
+
+@media all and (max-width: 1000px) {
+  .tm-main-single-service {
+    height: 950px; } }
+
+@media all and (max-width: 768px) {
+  .tm-main-single-service {
+    height: auto; } }

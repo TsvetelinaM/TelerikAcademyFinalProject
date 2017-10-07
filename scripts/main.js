@@ -12,16 +12,18 @@ import 'bootstrap';
         Sammy.element_selector = '#main';
         Sammy.get('#/', homeController.all);
         Sammy.get('#/home', homeController.all);
-        Sammy.get('#/services', servicesController.all);
+        Sammy.get('#/services', servicesController.getAllServices);
         Sammy.get('#/articles', articleController.getAllArticles);
         Sammy.get('#/login', userController.login);
         Sammy.get('#/register', userController.register);
         Sammy.get('#/articles/:name', articleController.getSingleArticle);
+        Sammy.get('#/services/:name', servicesController.getSingleService);
     });
 
 
     // Start application
     $(() => {
+        // $('body').html();
         $('.tm-responsive-nav').on('click',()=>{
             $('.tm-nav-dropdown').toggleClass('tm-hidden');
             $('.tm-nav-dropdown').on('click', ()=>{

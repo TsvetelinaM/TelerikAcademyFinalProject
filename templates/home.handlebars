@@ -77,21 +77,12 @@
     </section>
 
 
-    {{!-- <section class="tm-home-recent-work">
-        <ul class="tm-hbox">
-            <li class="tm-home-recent-work-item">
-                <div class="tm-no-image">
-                <img class="tm-home-recent-work-image" src="" alt="">
-                </div>
-            </li>
-        </ul>
-    </section> --}}
     <div class="tm-hbox-wrap tm-home-recent-work">
         {{#each this.services}}
-        <article class="container tm-home-recent-work-item" >
-            <div class="container tm-service-img">
+        <article class="container tm-home-recent-work-container" >
+            <div class="container tm-home-recent-work-img">
                 {{#if this.imgUrl}}
-                    <img src={{this.imgUrl}} alt="" class="tm-img tm-img-lower-opacity">
+                    <a href="#/services/{{this.linkName}}"><img src={{this.imgUrl}} alt="" class="tm-img tm-img-lower-opacity"></a>
                 {{else}}
                     <div class="tm-no-image"></div>
                 {{/if}}

@@ -69,7 +69,7 @@ body {
 #wrapper {
     width: 100%;
     height: auto;
-    // background-image: url("../imgs/bg_common.png");
+    background-image: url("../imgs/bg_common.png");
     background-size:cover;
     background-repeat: no-repeat;
 }
@@ -95,7 +95,7 @@ body {
 .header {
     display: block;
     background-color: inherit;
-    margin: 0 15% 0 15%;
+    margin: 0 6%;
     padding-top: 50px;
 }
 .navbar-default {
@@ -363,7 +363,7 @@ border-image:
 }
 
 .tm-footer-articles {
-    padding: 5% 15% 5% 15%;
+    padding: 5% 6%;
     height: 28%;
 
 }
@@ -400,7 +400,7 @@ border-image:
       background-color: rgba(0, 0, 0, 0.1);
       bottom:0px;
       height: 2.5em;
-      padding: 0 15% 0 15%;
+      padding: 0 6%;
       position: relative;
   }
 
@@ -423,11 +423,10 @@ border-image:
   }
   
   /*MAIN*/
-
   .tm-main-header{
     width: 100%;
     height: 108px;
-    padding: 0 15% 0 15%;
+    padding: 56px 6% 10px 6%;
     color: #ffffff;
     // font-size: 30px;
     font-size: 1.8em;
@@ -438,14 +437,14 @@ border-image:
 .tm-main-header-content {
     display: table-cell;
     vertical-align: bottom;
-    padding-bottom: 20px;
 }
 
 .tm-main {
-    width: 70%;
-    height: 1000px;
+    width: 100%;
+    height: auto;
     background-image: url("../imgs/bg_main.png");
-    padding: 0 15% 0 15%;
+    padding: 0 6%;
+    margin:0px;
     position: relative;
     border-top: 1px solid #ffffff;
     border-bottom: 1px solid #ffffff;
@@ -454,6 +453,10 @@ border-image:
     -moz-box-shadow: inset 0px 0px 9px 0px #080808,-2px -1px 18px 1px #050505;
     -o-box-shadow: inset 0px 0px 9px 0px #080808,-2px -1px 18px 1px #050505;
  
+}
+
+.container-fluid {
+height:auto;
 }
 
 .tm-main-path-name {

@@ -1,5 +1,5 @@
 .tm-comments-container {
-    width: 685px;
+    width: 73%;
     margin:0px;
     padding:0px;
 }
@@ -96,7 +96,7 @@
 
   .tm-leave-a-comment-container {
       width:100%;
-      padding: 50px 0 0 0;
+      padding: 50px 0 192px 0;
   }
 
 
@@ -105,10 +105,26 @@
     width:100%;
     font-size: 30px;
     font-family: 'Colaborate-Thin';
-    padding-bottom: 10px;
+    padding-bottom: 7px;
   }
 
   .tm-comments-input {
     width:100%;
   }
 
+
+
+@media all and (max-width: 900px) {
+    .tm-comments-container {
+        width: 80%;
+    }
+}
+
+@media all and (max-width: 768px) {
+    .tm-comments-container {
+        width: 100%;
+    }
+    .tm-dialog-container {
+        padding-right:0px;
+    }
+}

@@ -4,9 +4,9 @@ import database from 'database';
 import $ from 'jquery';
 import toastr from 'toastr';
 
-function all(context) {
+function getAllServices(context) {
     // const servicesArr = [
-    //     {title:'Accounting', imgUrl:'./../../styles/imgs/accounting.jpg', content:[
+    //     {linkName:'accounting',title:'Accounting', imgUrl:'./../../styles/imgs/accounting.jpg', content:[
     //     'Development of a company accounting policy and chart of accounts.',
     //     'Certification of annual financial statement by a registered auditor.',
     //     'Fixed assets: recording, preparation of depreciation plans, accrual of depreciation, stocktaking, periodic valuations, statistical returns.',
@@ -22,7 +22,7 @@ function all(context) {
     //     'Accrual of salaries and contractor fees due for the month.',
     //     'Accrual of social security contributions and wage cost taxes due for the month.',
     //     'Inspection- and audit-related returns required by the tax authorities.']},
-    //     {title:'Taxes', imgUrl:'./../../styles/imgs/taxes.jpg', content:[
+    //     {linkName:'taxes',title:'Taxes', imgUrl:'./../../styles/imgs/taxes.jpg', content:[
     //     'Income tax prepayments: determination of type and amount.',
     //     'Expenditure taxes: vehicle, entertainment and social expenses.',
     //     'Taxes deducted at source: on dividends, liquidation quotas, interest payments, etc.',
@@ -34,7 +34,7 @@ function all(context) {
     //     'Preparation and submission of VIES declarations.',
     //     'Filings with the National Revenue Agency (authenticated by an electronic signature).',
     //     'Payment of VAT: preparation of payment orders.']},
-    //     {title:'Salaries and Personnel', imgUrl:'./../../styles/imgs/salary.jpg', content:[
+    //     {linkName:'salaries', title:'Salaries and Personnel', imgUrl:'./../../styles/imgs/salary.jpg', content:[
     //         'Calculation of basic pay and additional payments.',
     //         'Calculation of holidays and compensations.',
     //         'Calculation of social and health insurance contributions.',
@@ -50,7 +50,7 @@ function all(context) {
     //         'Certification of records of social security contributions.',
     //         'Preparation of certificates of insurable earnings (Forms UP 2 and 3).'
     //     ]},
-    //     {title:'Legal services', imgUrl:'./../../styles/imgs/law.jpg', content:[
+    //     {linkName:'legal_services', title:'Legal services', imgUrl:'./../../styles/imgs/law.jpg', content:[
     //         'Registration of Bulgarian and foreign companies with the Registry Agency.',
     //         'Registration of companies with the Registry Agency (BULSTAT Register).',
     //         'Registration of non-profit legal entities with the Ministry of Justice.',
@@ -58,7 +58,7 @@ function all(context) {
     //         'Issue of electronic signatures: preparation and submission of documents to Infonotary;',
     //         'Provision of legal consultations with highly qualified lawyers'
     //     ]},
-    //     {title:'Specialised services', imgUrl:'./../../styles/imgs/special.jpg', content:[
+    //     {linkName:'specialised_services', title:'Specialised services', imgUrl:'./../../styles/imgs/special.jpg', content:[
     //         'Monitoring of document management and financial reporting in companies that have their own accounting departments.',
     //         'Secondment of qualified accountants employed by Active Consult to the client’s premises.',
     //         'Periodic reports for the company’s management.',
@@ -81,4 +81,41 @@ function all(context) {
 
 };
 
-export { all };
+function getSingleService(context) {
+    database.getItems('services')
+    .then((services) =>{
+        const currentServiceName = this.params['name'];
+        let servicesItems = [];
+        let servicesUid = Object.keys(services.val());
+
+        for (let i=servicesUid.length-1, y=1; i>=0; i--, y++) {
+            let currentServiceUid = servicesUid[i];
+            
+            servicesItems.push(services.val()[currentServiceUid]);
+        };
+
+        const currentService = servicesItems.filter((service) => service.linkName === currentServiceName);
+        const templateData = {currentServiceName, currentService};
+       console.log(currentService);
+        templates.get('single_service').then((template) => {
+            context.$element().html(template(templateData));
+        })
+    });
+
+};
+function getSingleArticle(context) {
+    database.getItems('articles')
+    .then((articles) => {
+        
+
+ 
+        templates.get('single_article').then((template) => {
+            context.$element().html(template(templateData));
+
+        });
+
+    })
+
+}
+
+export { getAllServices, getSingleService };

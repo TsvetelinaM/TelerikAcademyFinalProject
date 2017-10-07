@@ -1,6 +1,13 @@
+.tm-main-articles {
+  height: 1000px; }
+
+.tm-strange-symbol {
+  color: #929292;
+  content: "\0000bb"; }
+
 .tm-current-articles-container {
   position: relative;
-  width: 60%;
+  width: 70%;
   margin: 0px;
   padding: 0px;
   padding-bottom: 35px; }
@@ -20,15 +27,16 @@
   width: 100%;
   color: #5b5b5b;
   font-size: 18px;
-  font-family: 'Colaborate-Regular'; }
+  font-family: 'Colaborate-Thin';
+  padding: 10px 0; }
 
 .tm-article-image-container > img {
   padding: 0px;
   margin: 0px; }
 
 .tm-article-img {
-  width: 220px;
-  height: 220px; }
+  width: 222px;
+  height: 222px; }
 
 .tm-article-content-container {
   margin: 0px;
@@ -48,7 +56,7 @@
   margin-top: 20px;
   position: relative;
   margin-left: auto;
-  margin-right: 0; }
+  margin-right: 20px; }
 
 .tm-article-btn > a {
   color: #ffffff;
@@ -69,7 +77,7 @@
   display: inline-block;
   color: #5b5b5b;
   font-size: 18px;
-  font-family: 'Colaborate-Regular';
+  font-family: 'Colaborate-Thin';
   margin-right: 25px; }
 
 .tm-pagination-btn {
@@ -86,13 +94,21 @@
   border-radius: 8px;
   background: linear-gradient(to bottom, #323a43 0%, #1f262d 100%); }
 
-@media all and (max-width: 1100px) {
+@media all and (min-width: 900px) {
   .tm-current-articles-container {
-    width: 50%; }
+    width: 70%; }
   .tm-pagination-container {
-    width: 50%; } }
+    width: 70%; } }
+
+@media all and (max-width: 900px) {
+  .tm-current-articles-container {
+    width: 75%; }
+  .tm-pagination-container {
+    width: 75%; } }
 
 @media all and (max-width: 768px) {
+  .tm-main-articles {
+    height: 1150px; }
   .tm-current-articles-container {
     width: 100%; }
   .tm-pagination-container {
@@ -103,8 +119,24 @@
   .tm-article-img {
     width: 100%;
     height: 110px; }
+  .tm-article-title {
+    text-align: justify; }
+  .tm-article-posted-by {
+    text-align: justify; }
   .tm-article-content-container {
     text-align: justify;
     padding: 0px;
     width: 100%;
-    height: 110px; } }
+    height: auto; }
+  .tm-article-btn {
+    padding: 0px 20px;
+    height: 35px;
+    width: 120px;
+    margin-top: 20px;
+    line-height: 2; }
+  .tm-article-btn > a {
+    font-size: 16px; } }
+
+@media all and (max-width: 460px) {
+  .tm-main-articles {
+    height: 1250px; } }

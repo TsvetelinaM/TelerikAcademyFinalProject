@@ -1,3 +1,12 @@
+.tm-single-article-content-container {
+  margin: 0px;
+  padding: 5px 0px 0px 23px;
+  width: 60%;
+  color: #8b8b8b;
+  font-size: 12px;
+  font-family: 'Droid Sans';
+  height: auto; }
+
 .tm-comments-container {
   width: 73%;
   margin: 0px;
@@ -109,8 +118,19 @@
   .tm-comments-container {
     width: 80%; } }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 770px) {
   .tm-comments-container {
     width: 100%; }
   .tm-dialog-container {
-    padding-right: 0px; } }
+    padding-right: 0px; }
+  .tm-single-article-content-container {
+    overflow-y: auto; } }
+
+@media all and (max-width: 460px) {
+  .tm-single-article-content-container {
+    text-align: center;
+    padding: 0px;
+    width: 100%;
+    overflow-y: auto;
+    height: 200px;
+    text-align: justify; } }

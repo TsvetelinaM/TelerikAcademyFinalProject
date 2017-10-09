@@ -10,7 +10,7 @@ System.config({
    // App files
    'main': 'scripts/main.js',
    'templates': 'scripts/templates.js',
-   'localStorage': 'scripts/local-storage.js',
+   'helpers': 'scripts/helpers.js',
    'homeController': 'scripts/controllers/home-controller.js',
    'servicesController': 'scripts/controllers/services-controller.js',   
    'userController': 'scripts/controllers/user-controller.js', 

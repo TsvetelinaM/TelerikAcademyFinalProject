@@ -99,6 +99,10 @@ body {
     -ms-transform: translate(-50%, -50%);
 }
 
+.tm-strange-symbol::before {
+    color: #929292 ;
+    content: "\0000bb";
+}
 .container:hover .tm-middle {
     opacity: 1;
 }
@@ -198,13 +202,30 @@ color:#ffffff;
             }
             }
         }
-        .tm-align-right{
-            position: absolute;
-            right: 0px;
-            padding-right: 0px;
-        }
+
     }
 }
+.tm-align-right-fb-btn{
+    position: absolute;
+    right: 0px;
+    width: 14px;
+    padding-right: 0px;
+}
+.tm-align-right-rss-btn {
+    position: absolute;
+    right: 20px;
+    width: 14px;
+    padding-right: 0px;
+}
+.tm-align-right-tw-btn {
+    position: absolute;
+    right: 38px;
+    width: 14px;
+    padding-right: 0px;
+}
+.tm-align-right:hover{
+    opacity: 0.5;
+}    
 .tm-responsive-nav {
     width:33px;
     height: 33px;

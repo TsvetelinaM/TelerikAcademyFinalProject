@@ -92,10 +92,10 @@ function getAllArticles(context) {
                                 commentsCounter = articlesItems[i].comments.length
                             }
                             currentPageArticles+=`<div class="tm-article-main col-xs-12 col-md-8">
-                                                    <h2 class="tm-article-title">${articlesItems[i].title}</h2>
-                                                    <div class="tm-article-posted-by">Posted by ${articlesItems[i].author} on ${articlesItems[i].date} in ${articlesItems[i].category} | ${commentsCounter} Comments</div>
+                                                    <h2 class="tm-gradient-grey-color tm-article-title tm-Colaborate-30px"><p>${articlesItems[i].title}</p></h2>
+                                                    <div class="tm-gradient-white-color tm-article-posted-by">Posted by ${articlesItems[i].author} on ${articlesItems[i].date} in ${articlesItems[i].category} | ${commentsCounter} Comments</div>
                                                     <div class="container tm-hbox tm-article-main-part-container">
-                                                        <div class="col-md-4 tm-article-img">
+                                                        <div class="col-md-4 tm-img-container tm-article-img">
                                                             <img src=${articlesItems[i].imgUrl} alt="" class="tm-img">
                                                             <div class="tm-middle">
                                                                 <img src="./../styles/imgs/enlarge.png" alt="" >
@@ -221,4 +221,10 @@ function getSingleArticle(context) {
 
 }
 
-export { getAllArticles, getSingleArticle };
+function addArticle(context) {
+        templates.get('add_article').then((template) => {
+            context.$element().html(template());
+    });
+}
+
+export { getAllArticles, getSingleArticle, addArticle };

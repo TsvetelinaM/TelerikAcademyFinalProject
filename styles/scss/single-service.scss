@@ -24,7 +24,19 @@
 
 @media all and (max-width: 768px) {
     .tm-main-single-service {
+        height: 650px;
+    }
+    .tm-current-service-container {
+        width: 100%;
+    }
+    .tm-service-content-container {
         height: auto;
+    }
+}
+
+@media all and (max-width: 460px) {
+    .tm-main-single-service {
+        height: 950px;
     }
     .tm-current-service-container {
         width: 100%;

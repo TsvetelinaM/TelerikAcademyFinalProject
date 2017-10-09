@@ -2,7 +2,7 @@
 <p class="tm-main-header-content">Articles</p>
 </div>
 <div class="container-fluid tm-main tm-main-articles">
-    <div class="tm-main-path-name"><span class="tm-grey">Home <span class="tm-strange-symbol">>></span></span> Articles</div>
+    <div class="tm-main-path-name"><span class="tm-grey">Home <span class="tm-strange-symbol"></span></span> Articles</div>
     <div class="tm-aside-container">
             <aside class="tm-aside ml-auto">
                 <h5 class="tm-aside-heading">Recent Posts</h5>
@@ -24,7 +24,7 @@
         <div class="container tm-gradient-grey-color-left tm-current-articles-container">
             {{#each this.articlesItems}}
                 <div class="tm-article-main col-xs-12 col-md-12">
-                    <div class="tm-gradient-grey-color tm-article-title tm-Colaborate-30px">{{this.title}}</div>
+                    <div class="tm-gradient-grey-color tm-article-title tm-Colaborate-30px"><p>{{this.title}}</p></div>
                     <div class="tm-gradient-white-color tm-article-posted-by">Posted by {{this.author}} on {{this.date}} in {{this.category}} | {{this.commentsCounter}} Comments</div>
                     <div class="container tm-hbox tm-article-main-part-container">
                         <div class="col-md-4 tm-img-container tm-article-img">

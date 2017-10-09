@@ -13,6 +13,12 @@ import toastr from 'toastr';
 //     {imageURL:'./../styles/imgs/trustfully.jpg', title:'Trustfully'}
 // ];
 // database.addJSONToDB('carousel', array);
+
+
+
+//article input
+//spaces
+//loader
 let templateData;
 
 
@@ -22,6 +28,7 @@ function getIndex() {
     });
 }
 function getHome(context) {
+    //show loading screen
     database.getItems('services')
     .then((services) =>{
         templateData={services:services.val(),imagesArray:[]};

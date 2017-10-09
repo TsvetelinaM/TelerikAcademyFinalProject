@@ -84,6 +84,10 @@ body {
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%); }
 
+.tm-strange-symbol::before {
+  color: #929292;
+  content: "\0000bb"; }
+
 .container:hover .tm-middle {
   opacity: 1; }
 
@@ -168,10 +172,27 @@ body {
         text-decoration: none; }
         .navbar-header .tm-nav .tm-nav-item .tm-nav-link:hover {
           text-shadow: 1px 1px 2px #000000; }
-    .navbar-header .tm-nav .tm-align-right {
-      position: absolute;
-      right: 0px;
-      padding-right: 0px; }
+
+.tm-align-right-fb-btn {
+  position: absolute;
+  right: 0px;
+  width: 14px;
+  padding-right: 0px; }
+
+.tm-align-right-rss-btn {
+  position: absolute;
+  right: 20px;
+  width: 14px;
+  padding-right: 0px; }
+
+.tm-align-right-tw-btn {
+  position: absolute;
+  right: 38px;
+  width: 14px;
+  padding-right: 0px; }
+
+.tm-align-right:hover {
+  opacity: 0.5; }
 
 .tm-responsive-nav {
   width: 33px;

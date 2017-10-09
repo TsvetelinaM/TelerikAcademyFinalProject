@@ -14,7 +14,7 @@ body {
     font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
     font-weight: normal;
     line-height: 1.5;
-    color: #222222;
+    color: #ffffff;
     background-color: #11161c;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -23,7 +23,48 @@ body {
 }
 
 
- 
+.spinner {
+    width: 40px;
+    height: 40px;
+  
+    position: relative;
+    margin: 100px auto;
+  }
+  
+  .double-bounce1, .double-bounce2 {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #333;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+    animation: sk-bounce 2.0s infinite ease-in-out;
+  }
+  
+  .double-bounce2 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+  }
+  
+  @-webkit-keyframes sk-bounce {
+    0%, 100% { -webkit-transform: scale(0.0) }
+    50% { -webkit-transform: scale(1.0) }
+  }
+  
+  @keyframes sk-bounce {
+    0%, 100% { 
+      transform: scale(0.0);
+      -webkit-transform: scale(0.0);
+    } 50% { 
+      transform: scale(1.0);
+      -webkit-transform: scale(1.0);
+    }
+  }
+
 .tm-hbox {
     display: flex;
     flex-direction: row;
@@ -72,6 +113,11 @@ body {
     background-image: url("../imgs/bg_common.png");
     background-size:cover;
     background-repeat: no-repeat;
+    color:#000000;
+}
+
+.tm-loading{
+color:#ffffff;
 }
 
 .tm-link-btn {
@@ -176,6 +222,10 @@ body {
     color:#ffffff;
 }
 
+.tm-nav-notresponsive-item{
+    margin-right: 7px;
+}
+
 
 //dropdown menu:
 .tm-nav-dropdown {
@@ -224,6 +274,7 @@ body {
 
 
 /*Main*/
+
 main, #main {
     margin:0px;
     padding:0px;
@@ -363,13 +414,15 @@ border-image:
 }
 
 .tm-footer-articles {
+    width: 100%;
     padding: 5% 6%;
     height: 28%;
-
+    justify-content:space-between;
 }
 .tm-footer-section {
-    width: 10em;
+    width:33%;
     flex-grow: 1;
+    flex: 1 1 calc(30%);
     overflow: visible;
   }
 
@@ -380,11 +433,15 @@ border-image:
 
 
   .tm-footer-section .tm-footer-section-h6 {
-    width:100%;
-    margin-bottom: 0.75em;
+    // width: 240px;
+    // width:100%;
+    margin:0;
+    padding-bottom: 7px;
   }
   .tm-footer-section-p{
-    width:100%;
+    width: 270px;
+    // width:100%;
+    overflow: hidden;
   }
   .tm-footer-section .tm-footer-section-ul li {
     width:100%;
@@ -409,7 +466,7 @@ border-image:
       line-height: 2.5;
       text-decoration: none !important;
       display:block;
-      margin-right: 5px;
+      margin-right: 15px;
       float: left;
       order: 1;
   }
@@ -497,7 +554,7 @@ height:auto;
     }
 
     .tm-footer-section{
-        width:100%;
+        width: 100%;
         padding:3%;
         margin:0px;
         border-bottom:1px solid rgba(0,0,0,0.5);
@@ -506,6 +563,7 @@ height:auto;
         text-align: justify;
     }
     .tm-footer-section-p {
+        width:100%;
         font-size:16px;
     }
     .tm_footer_section_copyright {

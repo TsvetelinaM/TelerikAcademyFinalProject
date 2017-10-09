@@ -1,41 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>The Home of Аccounting</title>
-  <link rel="shortcut icon" href="./services.ico" />
-
-  <link rel="stylesheet" href="./libs/bootstrap/dist/css/bootstrap.css">
-  <link rel="stylesheet" href="./libs/toastr.css">
-  <link rel="stylesheet" href="./libs/please-wait.css">
-  <link rel="stylesheet" href="./styles/fonts/fonts.css">
-
-  <link rel="stylesheet" href="./styles/css/main.css">
-  <link rel="stylesheet" href="./styles/css/services.css">
-  <link rel="stylesheet" href="./styles/css/carousel.css">
-  <link rel="stylesheet" href="./styles/css/quote.css">
-  <link rel="stylesheet" href="./styles/css/home.css">
-  <link rel="stylesheet" href="./styles/css/aside.css">  
-  <link rel="stylesheet" href="./styles/css/login.css"> 
-  <link rel="stylesheet" href="./styles/css/articles.css">
-  <link rel="stylesheet" href="./styles/css/single-article.css">
-  <link rel="stylesheet" href="./styles/css/single-service.css">
-  
-
-</head>
-
-<body>
-  
-  <!-- <div id="wrapper">
+ <div id="wrapper">
     <header class="header">
             <a class="navbar-brand" href="#/">
               <span class = "tm-envisioned">the home of accounting</span>
             </a>
             <nav class="navbar-default container-fluid tm-hbox">
-                <div class="navbar-header col-lg-8">
+                <div class="navbar-header col-xs-12 col-md-12 col-lg-8">
                     <ul class="tm-nav tm-hbox">
                         <li class="tm-hidden tm-responsive-nav-item tm-nav-item">
                             <button class="tm-responsive-nav glyphicon glyphicon-align-justify"></button>
@@ -50,10 +19,10 @@
                                     <li class="tm-nav-dropdown-list-item">
                                       <a class="tm-nav-dropdown-list-item-link" href="#/articles">Articles</a>
                                     </li>
-                                    <li class="tm-btn-login tm-nav-dropdown-list-item">
+                                    <li id="tm-btn-login-drop" class="tm-btn-login tm-nav-dropdown-list-item">
                                         <a class="tm-nav-dropdown-list-item-link" href="#/login">Log In</a>
                                       </li>
-                                      <li class="tm-btn-signout tm-nav-dropdown-list-item tm-hidden">
+                                      <li id="tm-btn-signout-drop" class="tm-btn-signout tm-nav-dropdown-list-item tm-hidden">
                                         <a class="tm-nav-dropdown-list-item-link" href="#/">Log Out</a>
                                       </li>
                                 </ul>
@@ -71,10 +40,10 @@
                       <li class="tm-nav-notresponsive-item tm-nav-item">
                           <a class="tm-nav-link tm-link-btn" href="#/about">About</a>
                         </li>
-                        <li class="tm-btn-login tm-nav-notresponsive-item tm-nav-item">
+                        <li id="tm-btn-login" class="tm-btn-login tm-nav-notresponsive-item tm-nav-item">
                           <a class="tm-nav-link tm-link-btn" href="#/login">Log In</a>
                         </li>
-                        <li class="tm-btn-signout tm-nav-notresponsive-item tm-nav-item tm-hidden">
+                        <li id="tm-btn-signout" class="tm-btn-signout tm-nav-notresponsive-item tm-nav-item tm-hidden">
                           <a class="tm-nav-link tm-link-btn" href="#/">Log Out</a>
                         </li>
                         <li  class="tm-nav-item tm-align-right">
@@ -87,12 +56,12 @@
 
     <main>
         <div id="main">
-          LOADING...
+          <div class="tm-loading">LOADING...</div>
           </div>
     </main>
 
    <footer  class="tm-footer">
-         <div class="tm-hbox tm-footer-articles">
+         <div class="tm-hbox-wrap tm-footer-articles">
               <section class = "tm-footer-section">
                 <h6 class = "tm-footer-section-h6">
                     Who We Are
@@ -136,18 +105,4 @@
                 </span>
             </section>
     </footer>
-  </div> -->
-
-  <script src="./node_modules/please-wait/build/please-wait.min.js"></script>
-  <script src="./libs/firebase.js"></script>
-  <script src="./scripts/config/firebase_conf.js" charset="utf-8"></script>
-  <script src="./libs/es5-shim.min.js"></script>
-  <script src="./libs/es6-shim.min.js"></script>
-  <script src="./libs/systemjs/dist/system.js"></script>
-  <script src="./scripts/config/system-config.js"></script> 
-  <script>
-    System.import('./scripts/main.js');
-  </script>
-</body>
-
-</html>
+  </div>

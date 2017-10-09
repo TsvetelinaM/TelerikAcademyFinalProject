@@ -6,10 +6,71 @@
     right: 6%;
 }
 .tm-aside {
-    height: auto;
-    max-width: 260px;
+    overflow: hidden;
+    width: 270px;
     position: relative;
 }
+
+.tm-aside-body-post {
+    max-height: 200px;
+    overflow: hidden;
+    
+}
+.tm-aside-body-links {
+    max-height: 290px;
+    overflow: hidden;
+}
+
+.tm-aside-heading {
+    font-size: 24px;
+    margin-left: 2%;
+    font-family: "Colaborate-Thin";
+}
+
+.tm-aside-body {
+    height: 100%;
+    font-size: 12px;
+    font-family: "Droid Sans";
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #c5c5c5;
+    background: #ffffff;
+    background: linear-gradient(to bottom, #ffffff 0%, #f7f7f7 60%);
+ }
+
+ .tm-aside-body-post p {
+     height:140px;
+     overflow:hidden;   
+ }
+
+ .tm-aside-body-post p a {
+    color:#5e5e5e;
+}
+ .tm-aside-body-links ul {
+    height:230px;
+    overflow:hidden;
+    padding:15px;
+    color:#5e5e5e;
+}
+
+.tm-aside-body-links ul li a {
+    margin-bottom: 20px;
+    color:#5e5e5e;
+}
+
+.tm-aside-comments {
+    height:auto
+}
+
+.tm-aside-comments ul {
+    padding: 0 0 0 15px;
+    height:auto
+}
+.tm-aside-comments ul li {
+    height:auto;
+    color:#5e5e5e;
+}
+
 
 @media all and (max-width: 1024px) {
     .tm-aside {
@@ -26,16 +87,3 @@
 
 
 
-.tm-aside-heading {
-    font-size: 16px;
-    margin-left: 2%;
-}
-
-.tm-aside-body {
-    font-size: 10px;
-    padding: 30px;
-    border-radius: 10px;
-    border: 1px solid #c5c5c5;
-    background: #ffffff;
-    background: linear-gradient(to bottom, #ffffff 60%, #f7f7f7 100%);
- }

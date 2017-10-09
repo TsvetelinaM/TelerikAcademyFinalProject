@@ -8,6 +8,7 @@ class Article {
         this.content = content;
         this.imgUrl = imgUrl;
         this.comments = [];
+        this.commentsCounter=0;
     }
 }
 

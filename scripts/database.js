@@ -9,7 +9,7 @@ const database = {
                         this.userAuth.updateProfile({ displayName: newUser.username, photoURL: '' });
                         this.displayUser = {displayName: newUser.username, uid: this.userAuth.uid};
                         localStorage.setItem('displayUser', JSON.stringify({displayName: newUser.username, uid: user.uid, email: newUser.email}));
-                        console.log(this.userAuth);
+                        console.log(localStorage.getItem('displayUser'));
                         return this.createUserByGivenID(user.uid, newUser);
                     })
                     .catch((err) => {
@@ -46,10 +46,16 @@ const database = {
     // Getting information about the lists
     getItems: (ref) => {
         return firebase.database().ref(ref).once('value');
-    }
+    },
 
-
+    pushItems: (collection, item) => {
+        return firebase.database().ref(collection).push(item);
+    },
     
+    pushItemByGivenElement: (ref, element, item) => {
+        return firebase.database().ref(ref).child(element).set(item);
+    },
+
     // getSingleList: (key) => {
     //     return firebase.database().ref('lists/' + localStorage.uid + '/' + key).once('value');
     // },

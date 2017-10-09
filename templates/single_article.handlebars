@@ -2,51 +2,41 @@
 <p class="tm-main-header-content">{{this.currentArticle.[0].title}}</p>
 </div>
 <div class="container-fluid tm-main">
-    <div class="tm-gradient-grey-color tm-main-path-name"><span class="tm-grey">Home >> Articles >> </span> {{this.currentArticle.[0].title}}</div>
+    <div class="tm-gradient-grey-color tm-main-path-name tm-current-article-title"><span class="tm-grey">Home >> Articles >> </span> {{this.currentArticle.[0].title}}</div>
     <div class="tm-aside-container">
             <aside class="tm-aside ml-auto">
                 <h5 class="tm-aside-heading">Recent Posts</h5>
-                <div class="tm-aside-body">
-                            Rhoncus quis, varius sed velit. 
-                    Mauris quis nunc eu nunc molestie 
-                    egestas et sit amet odio. Morbi 
-                    lacinia velit in nibh sodales sed 
-                    pharetra sem feugiat. Vivamus ut 
-                    cursus augue. Integer sit amet arcu 
-                    lorem, at egestas tellus. Phasellus 
-                    tellus orci, congue at tristique at, 
-                    mattis ut arcu. Donec dictum eros eu 
-                    felis laoreet egestas. Nullam adipiscing 
-                    nibh id felis lacinia a iaculis nisi 
-                    vestibulum. Ut sit amet urna enim, 
-                    at accumsan quam. Nunc dui elit, 
-                    hendrerit quis convallis sit amet,
+                <div class="tm-aside-body tm-aside-body-post">
+                    <p><a href="#/articles/{{this.allArticles.[0].linkName}}">{{this.allArticles.[0].content}}</a></p>
                 </div>
             </aside>
             <aside class="tm-aside">
                 <h5 class="tm-aside-heading">Recent Posts</h5>
-                <div class="tm-aside-body ">
-                            Rhoncus quis, varius sed velit. 
-                    Mauris quis nunc eu nunc molestie 
-                    egestas et sit amet odio. Morbi 
-                    lacinia velit in nibh sodales sed 
-                    pharetra sem feugiat. Vivamus ut 
-                    cursus augue. Integer sit amet arcu 
-                    lorem, at egestas tellus. Phasellus 
-                    tellus orci, congue at tristique at, 
-                    mattis ut arcu. Donec dictum eros eu 
-                    felis laoreet egestas. Nullam adipiscing 
-                    nibh id felis lacinia a iaculis nisi 
-                    vestibulum. Ut sit amet urna enim, 
-                    at accumsan quam. Nunc dui elit, 
-                    hendrerit quis convallis sit amet,
+                <div class="tm-aside-body tm-aside-body-links ">
+                    <ul>
+                    {{#each this.allArticles}}
+                    <li><a href="#/articles/{{this.linkName}}">{{this.title}}</a></li>
+                    {{/each}}
+                    </ul>
                 </div>
             </aside>
+            {{#if this.currentArticle.[0].comments}}
+            <aside class="tm-aside ">
+                <h5 class="tm-aside-heading">Recent Comments</h5>
+                <div class="tm-aside-body tm-aside-body-links tm-aside-comments">
+                    <ul>
+                    {{#each this.currentArticle.[0].comments}}
+                    <li>{{this.comment}}</li>
+                    {{/each}}
+                    </ul>
+                </div>
+            </aside>
+            {{/if}}
         </div>
 
-        <div class="container tm-gradient-white-color tm-current-articles-container">
+        <div class="container tm-gradient-white-color tm-current-articles-container ">
                 <div class="tm-article-main col-xs-12 col-md-8">
-                    <div class="tm-article-posted-by">Posted by {{this.currentArticle.[0].author}} on {{this.currentArticle.[0].date}} in {{this.currentArticle.[0].category}} | {{#if this.currentArticle.[0].comments}} {{this.currentArticle.[0].comments.length}} {{else}} 0 {{/if}} Comments</div>
+                    <div class="tm-article-posted-by">Posted by {{this.currentArticle.[0].author}} on {{this.currentArticle.[0].date}} in {{this.currentArticle.[0].category}} | <span class="tm-comments-counter-span">{{this.currentArticle.[0].commentsCounter}}</span> Comments</div>
                     <div class="container tm-hbox tm-article-main-part-container">
                         <div class="col-md-4 tm-img-container tm-article-img">
                             {{#if this.currentArticle.[0].imgUrl}}
@@ -62,10 +52,11 @@
                 </div>
         </div>
         <div class="container tm-comments-container">
-            <div class="container tm-gradient-grey-color tm-comments-counter tm-Colaborate-30px">{{#if this.currentArticle.[0].comments}} {{this.currentArticle.[0].comments.length}} {{else}} 0 {{/if}}Comments</div>
+            <div class="container tm-gradient-grey-color tm-comments-counter tm-Colaborate-30px"><button class="tm-comments-toggle-btn"><span class="tm-comments-counter-span">{{this.currentArticle.[0].commentsCounter}}</span> Comments</button></div>
+            <div class="tm-dialogs-container tm-gradient-white-color">
             {{#if this.currentArticle.[0].comments}}
                 {{#each this.currentArticle.[0].comments}}
-                    <div class="container tm-gradient-white-color tm-comment-dialog-container tm-hbox">
+                    <div class="container tm-comment-dialog-container tm-hbox">
                         <div class="tm-comment-img-date-container">
                             <div class="col-md-4 tm-img-container tm-comment-img">
                                 <div class="tm-img-shadow-container">
@@ -93,10 +84,13 @@
                     </div>
                 {{/each}}
             {{/if}}
+            </div>
             <div class="container tm-leave-a-comment-container">
-                <div class="tm-gradient-grey-color tm-comments-label">Leave a Comment</div>
-                <div class="tm-gradient-white-color tm-comments-input">
-                <input class="tm-hidden" type="text">
+                <div class="tm-gradient-grey-color tm-comments-label col-xs-12 col-md-12">
+                    <input class="tm-comments-input" type="text" value="Leave a Comment">
+                </div>
+                <div class="tm-gradient-white-color tm-comments-btn-container col-xs-12 col-md-12">
+                    <button class="tm-hidden tm-article-btn tm-active-page tm-post-comment-btn">Post</button>
                 </div>
             </div>
         </div>

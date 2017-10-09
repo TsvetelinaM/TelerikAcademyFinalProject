@@ -17,7 +17,7 @@ function login(context) {
                 database.signInUser(email, password)
                 .then(() => {
                     let userAuth = firebase.auth().currentUser;
-                    localStorage.setItem('displayUser', JSON.stringify({displayName: userAuth.username, uid: userAuth.uid, email: userAuth.email}));
+                    localStorage.setItem('displayUser', JSON.stringify({displayName: userAuth.displayName, uid: userAuth.uid, email: userAuth.email}));
                     toastr.success('Successfuly logged in');
                     context.redirect('#/');
                 })
@@ -36,12 +36,14 @@ function register(context) {
     templates.get('register').then((template) => {
         context.$element().html(template());
 
-        $('#tm-singlebutton-login').on('click',() => {
+        $('#tm-singlebutton-register').on('click',() => {
             $('form').submit((e) => { e.preventDefault(); });
             try {
-                const username = $('#tm-textinput-username-log').val();
-                const email = $('#tm-textinput-email-log').val();
-                const password = $('#tm-passwordinput-password-log').val();
+                const username = $('#tm-textinput-username').val();
+                console.log(username);
+                const email = $('#tm-textinput-email').val();
+                console.log(email);
+                const password = $('#tm-passwordinput-password').val();
                 const newUser = new User(username, email,  password);
                 database.createUser(email, password, newUser)
                 .then(() => {

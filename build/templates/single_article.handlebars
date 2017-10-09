@@ -1,0 +1,97 @@
+<div class="container-fluid tm-main-header">
+<p class="tm-main-header-content">{{this.currentArticle.[0].title}}</p>
+</div>
+<div class="container-fluid tm-main">
+    <div class="tm-gradient-grey-color tm-main-path-name tm-current-article-title"><span class="tm-grey">Home >> Articles >> </span> {{this.currentArticle.[0].title}}</div>
+    <div class="tm-aside-container">
+            <aside class="tm-aside ml-auto">
+                <h5 class="tm-aside-heading">Recent Posts</h5>
+                <div class="tm-aside-body tm-aside-body-post">
+                    <p><a href="#/articles/{{this.allArticles.[0].linkName}}">{{this.allArticles.[0].content}}</a></p>
+                </div>
+            </aside>
+            <aside class="tm-aside">
+                <h5 class="tm-aside-heading">Recent Posts</h5>
+                <div class="tm-aside-body tm-aside-body-links ">
+                    <ul>
+                    {{#each this.allArticles}}
+                    <li><a href="#/articles/{{this.linkName}}">{{this.title}}</a></li>
+                    {{/each}}
+                    </ul>
+                </div>
+            </aside>
+            {{#if this.currentArticle.[0].comments}}
+            <aside class="tm-aside ">
+                <h5 class="tm-aside-heading">Recent Comments</h5>
+                <div class="tm-aside-body tm-aside-body-links tm-aside-comments">
+                    <ul>
+                    {{#each this.currentArticle.[0].comments}}
+                    <li>{{this.comment}}</li>
+                    {{/each}}
+                    </ul>
+                </div>
+            </aside>
+            {{/if}}
+        </div>
+
+        <div class="container tm-gradient-white-color tm-current-articles-container ">
+                <div class="tm-article-main col-xs-12 col-md-8">
+                    <div class="tm-article-posted-by">Posted by {{this.currentArticle.[0].author}} on {{this.currentArticle.[0].date}} in {{this.currentArticle.[0].category}} | <span class="tm-comments-counter-span">{{this.currentArticle.[0].commentsCounter}}</span> Comments</div>
+                    <div class="container tm-hbox tm-article-main-part-container">
+                        <div class="col-md-4 tm-img-container tm-article-img">
+                            {{#if this.currentArticle.[0].imgUrl}}
+                            <img src={{this.currentArticle.[0].imgUrl}} alt="" class="tm-img">
+                            {{else}}
+                            <div class="tm-no-image"></div>
+                            {{/if}}
+                        </div>
+                        <div class="container tm-article-content-container col-md-8">
+                            {{this.currentArticle.[0].content}}
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="container tm-comments-container">
+            <div class="container tm-gradient-grey-color tm-comments-counter tm-Colaborate-30px"><button class="tm-comments-toggle-btn"><span class="tm-comments-counter-span">{{this.currentArticle.[0].commentsCounter}}</span> Comments</button></div>
+            <div class="tm-dialogs-container tm-gradient-white-color">
+            {{#if this.currentArticle.[0].comments}}
+                {{#each this.currentArticle.[0].comments}}
+                    <div class="container tm-comment-dialog-container tm-hbox">
+                        <div class="tm-comment-img-date-container">
+                            <div class="col-md-4 tm-img-container tm-comment-img">
+                                <div class="tm-img-shadow-container">
+                                    <div class="tm-img-shadow"></div>
+                                    <img src="./../styles/imgs/kai.jpeg" alt="" class="tm-img">
+                                </div>
+                            </div>
+                            <div class="tm-comment-date">{{this.date}}</div>
+                        </div>
+                        <div class="container-fluid tm-dialog-container">
+                            <div class="tm-dialog">
+                                <span class="tm-top-bot"></span>
+                                <span class="tm-top-bot tm-top-bot-border"></span>
+                                <div class="tm-dialog-content">
+                                    <span class="tm-comment-author">{{this.author}} says:</span> 
+                                    <span class="tm-comment-content">{{this.comment}}</span>
+                                    <button class="tm-comment-btn tm-active-page">Read More</button>
+                                </div>
+                            </div>
+                            {{#if this.currentArticle.[0].comments}}
+                                {{#each this.currentArticle.[0].comments}}
+                                {{/each}}
+                            {{/if}}
+                        </div>
+                    </div>
+                {{/each}}
+            {{/if}}
+            </div>
+            <div class="container tm-leave-a-comment-container">
+                <div class="tm-gradient-grey-color tm-comments-label col-xs-12 col-md-12">
+                    <input class="tm-comments-input" type="text" value="Leave a Comment">
+                </div>
+                <div class="tm-gradient-white-color tm-comments-btn-container col-xs-12 col-md-12">
+                    <button class="tm-hidden tm-article-btn tm-active-page tm-post-comment-btn">Post</button>
+                </div>
+            </div>
+        </div>
+</div>

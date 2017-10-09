@@ -82,7 +82,23 @@ function getAllServices(context) {
 };
 
 function getSingleService(context) {
-    database.getItems('services')
+    let templateData;
+    database.getItems('articles')
+    .then((articles) => {
+        const currentArticleName = this.params['name'];
+        let articlesItems = [];
+        let articlesUid = Object.keys(articles.val());
+        
+        for (let i=articlesUid.length-1, y=1; i>=0; i--, y++) {
+            const currentArticleUid = articlesUid[i];
+            const articleWithUid = articles.val()[currentArticleUid];
+            articleWithUid.uid = currentArticleUid;
+            articlesItems.push(articleWithUid);
+            
+        };
+        templateData = { allArticles:articlesItems };
+        return database.getItems('services')
+    })
     .then((services) =>{
         const currentServiceName = this.params['name'];
         let servicesItems = [];
@@ -95,7 +111,8 @@ function getSingleService(context) {
         };
 
         const currentService = servicesItems.filter((service) => service.linkName === currentServiceName);
-        const templateData = {currentServiceName, currentService};
+        templateData.currentServiceName = currentServiceName;
+        templateData.currentService = currentService;
        console.log(currentService);
         templates.get('single_service').then((template) => {
             context.$element().html(template(templateData));
@@ -103,19 +120,6 @@ function getSingleService(context) {
     });
 
 };
-function getSingleArticle(context) {
-    database.getItems('articles')
-    .then((articles) => {
-        
 
- 
-        templates.get('single_article').then((template) => {
-            context.$element().html(template(templateData));
-
-        });
-
-    })
-
-}
 
 export { getAllServices, getSingleService };

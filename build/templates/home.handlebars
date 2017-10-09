@@ -1,28 +1,28 @@
-<div class="carrousel__container">
-    <div class="carrousel">
-        <div class="carrousel__image--active">
-            <img src={{this.[1].imageURL}} class="carrousel__image--center">
-            <div class="carrousel__image--active__overlay"></div>
-            <div class="carrousel__arrow carrousel__arrow--left glyphicon glyphicon-chevron-left"></div>
-            <div class="carrousel__icon__container">
-                <div class="carrousel__icon carrousel__icon--media"></div>
-                <a class="carrousel__icon carrousel__icon--open glyphicon glyphicon-zoom-in"></a>
+<div class="tm-carrousel-container">
+    <div class="tm-carrousel">
+        <div class=" tm-carousel-shadow tm-carrousel-image-active ">
+            <img src={{this.imagesArray.[0].imageURL}} class="tm-carrousel-image-center">
+            <div class="tm-carrousel-image-active-overlay"></div>
+            <div class="tm-carrousel-arrow tm-carrousel-arrow-left glyphicon glyphicon-chevron-left"></div>
+            <div class="tm-carrousel-icon-container">
+                <div class="tm-carrousel-icon tm-carrousel-icon-media"></div>
+                <a class="tm-carrousel-icon tm-carrousel-icon-open glyphicon glyphicon-zoom-in"></a>
             </div>
-                <div class="carrousel__title__overlay">
-                    <h4 class="carrousel__title">{{this.[1].title}}</h4>
+                <div class="tm-carrousel-title-overlay">
+                    <h4 class="tm-carrousel-title">{{this.imagesArray.[0].title}}</h4>
                 </div>
-            <div class="carrousel__arrow carrousel__arrow--right glyphicon glyphicon-chevron-right"></div>
+            <div class="tm-carrousel-arrow tm-carrousel-arrow-right glyphicon glyphicon-chevron-right"></div>
         </div>
-        <div class="carrousel__image__container">
-            {{#each this}}
-            <div class="carrousel__image"><img src={{this.imageURL}}></div>
+        <div class="tm-carrousel-image-container">
+            {{#each this.imagesArray}}
+            <div class="tm-carrousel-image"><img src={{this.imageURL}}></div>
             {{/each}}
         </div>
     </div>
 </div>
 <div class="container-fluid tm-home-main ">
     <section  class = "tm-home-info">
-        <ul class = "tm-hbox">
+        <ul class = "tm-hbox tm-home-info-ul">
             <li>
                 <div class = "tm-home-section-h6">
                 <img src="./styles/imgs/services.png" alt="">
@@ -77,15 +77,23 @@
     </section>
 
 
-    <section class="tm-home-recent-work">
-        <ul class="tm-hbox">
-            <li class="tm-home-recent-work-item">
-                <div class="tm-no-image"></div>
-                <img class="tm-home-recent-work-image" src="" alt="">
-            </li>
-        </ul>
-    </section>
-
+    <div class="tm-hbox-wrap tm-home-recent-work">
+        {{#each this.services}}
+        <article class="container tm-home-recent-work-container" >
+            <div class="container tm-home-recent-work-img">
+                {{#if this.imgUrl}}
+                    <a href="#/services/{{this.linkName}}"><img src={{this.imgUrl}} alt="" class="tm-img tm-img-lower-opacity"></a>
+                {{else}}
+                    <div class="tm-no-image"></div>
+                {{/if}}
+                <div class="tm-middle">
+                        <img src="./../styles/imgs/enlarge.png" alt="" >
+                        <img src="./../styles/imgs/zoom-in.png" alt="" >                    
+                </div>
+            </div>
+        </article>
+        {{/each}}
+    </div>
 </div>
 
 

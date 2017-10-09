@@ -148,7 +148,7 @@
 
 @media all and (max-width: 768px) {
     .tm-main-articles {
-        height: 1500px;
+        height: 1500px !important;
     }
     .tm-current-articles-container {
         width: 100%;
@@ -192,6 +192,6 @@
 
 @media all and (max-width: 460px) {
     .tm-main-articles {
-        height: 1250px;
+        height: 1250px  !important; 
     }
 }

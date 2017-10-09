@@ -3,7 +3,12 @@
 }
 
 .tm-current-service-container {
-    padding-top:45px;
+        position: relative;
+        // width: 60%;
+        width:70%;
+        margin:0px;
+        padding: 0px;
+        padding-bottom: 35px;
 }
 
 .tm-service-img {
@@ -21,5 +26,11 @@
     .tm-main-single-service {
         height: auto;
     }
-    
+    .tm-current-service-container {
+        width: 100%;
+    }
+    .tm-service-content-container {
+        height: auto;
+    }
 }
+

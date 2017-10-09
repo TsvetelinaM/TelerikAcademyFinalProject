@@ -1,13 +1,14 @@
 import 'jquery';
+import toastr from 'toastr';
 
 const database = {
     // Adding users methods
-    createUser: (email, password, newUser) => {
+    createUser(email, password, newUser) {
         return firebase.auth().createUserWithEmailAndPassword(email, password)
                     .then((user) => {
-                        this.userAuth = firebase.auth().currentUser;
-                        this.userAuth.updateProfile({ displayName: newUser.username, photoURL: '' });
-                        this.displayUser = {displayName: newUser.username, uid: this.userAuth.uid};
+                        let userAuth = firebase.auth().currentUser;
+                        userAuth.updateProfile({ displayName: newUser.username, photoURL: '' });
+                        console.log(userAuth);
                         localStorage.setItem('displayUser', JSON.stringify({displayName: newUser.username, uid: user.uid, email: newUser.email}));
                         console.log(localStorage.getItem('displayUser'));
                         return this.createUserByGivenID(user.uid, newUser);
@@ -17,7 +18,7 @@ const database = {
                     });
     },
 
-    createUserByGivenID: (uid, user) => {
+    createUserByGivenID (uid, user) {
         return firebase.database().ref('users/').child(uid).set(user);
     },
 

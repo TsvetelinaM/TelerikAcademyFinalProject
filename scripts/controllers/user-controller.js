@@ -40,9 +40,7 @@ function register(context) {
             $('form').submit((e) => { e.preventDefault(); });
             try {
                 const username = $('#tm-textinput-username').val();
-                console.log(username);
                 const email = $('#tm-textinput-email').val();
-                console.log(email);
                 const password = $('#tm-passwordinput-password').val();
                 const newUser = new User(username, email,  password);
                 database.createUser(email, password, newUser)

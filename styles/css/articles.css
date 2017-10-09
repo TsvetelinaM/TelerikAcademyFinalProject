@@ -1,5 +1,5 @@
 .tm-main-articles {
-  height: 1000px; }
+  height: 1000px !important; }
 
 .tm-current-article-title {
   padding-bottom: 45px; }

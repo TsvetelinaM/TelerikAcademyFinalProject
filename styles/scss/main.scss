@@ -526,6 +526,10 @@ height:auto;
     body {
         font-size: 100%;
     }
+    .tm-footer-section-h6, .tm-footer-section-p{
+        width:90%;
+        text-align: justify;
+    }
 }
 
 @media all and (max-width: 760px) {

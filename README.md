@@ -1,6 +1,6 @@
 # TelerikAcademyFinalProject
 Final front-end project
-
+Steps 
 Requirements for the "Web front-end develeopment" course project
 
 This document describes the final project assignment for Telerik Academy students in "Web front-end develeopment" course
@@ -9,7 +9,7 @@ Project Description
 
 Design and implement an SPA application by choice.
 
- - The home of services - a place where you can find what you need
+ - The home of accounting - a place where you can find what you need
 
 General Requirements
 

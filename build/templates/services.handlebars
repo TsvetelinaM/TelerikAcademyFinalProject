@@ -4,11 +4,11 @@
 </div>
 <div class="container-fluid tm-main">
     <div class="tm-main-path-name"><span class="tm-grey">Home <span class="tm-strange-symbol"></span></span> Services</div>
-    <div class="tm-hbox-wrap">
+    <div class="tm-hbox-wrap tm-services-container">
         {{#each this}}
         <article class="container tm-servise-container" >
             <div class="tm-service-title">{{this.title}}</div>
-            <div class="container tm-service-img">
+            <div class="container tm-service-img tm-services-img">
                 {{#if this.imgUrl}}
                     <img src={{this.imgUrl}} alt="" class="tm-img tm-img-lower-opacity">
                 {{else}}

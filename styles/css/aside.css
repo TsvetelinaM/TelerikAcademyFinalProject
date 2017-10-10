@@ -60,7 +60,7 @@
   height: auto;
   color: #5e5e5e; }
 
-@media all and (max-width: 1024px) {
+@media all and (max-width: 1200px) {
   .tm-aside {
     max-width: 180px; } }
 

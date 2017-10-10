@@ -51,7 +51,7 @@ function getAllArticles(context) {
         for (let i=articlesUid.length-1, y=1; i>=0; i--, y++) {
             let currentArticleUid = articlesUid[i] 
             articlesItems.push(articles.val()[currentArticleUid]);
-            if (y<=articlesUid.length/2+1) {
+            if (y<articlesUid.length/2+1) {
                 pageIndex.push(y);
             }
         };
@@ -217,7 +217,11 @@ function addArticle(context) {
                 const imageUrl = './../../styles/imgs/article2.jpg';
                 const newArticle = new Article(currentAuthor.displayName,currentDay,articleCategory, articleTitle, articleContent, imageUrl)
                 console.log(newArticle);
-                database.pushItems('articles/',newArticle);
+                database.pushItems('articles/',newArticle)
+                .then((conf) => {
+                    context.redirect('#/articles');
+                });
+
             } else {
                 toastr.error('Please fill in all the input');
             }

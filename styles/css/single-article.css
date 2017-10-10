@@ -121,7 +121,8 @@
   .tm-single-article-content-container {
     overflow-y: auto; }
   .tm-dialog {
-    height: 100px;
+    height: 130px; }
+  .tm-dialog-content {
     overflow: hidden;
     overflow-y: auto; } }
 

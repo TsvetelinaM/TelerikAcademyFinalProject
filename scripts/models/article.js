@@ -1,6 +1,7 @@
 
 class Article {
     constructor(author, date, category, title, content, imgUrl) {
+        this.linkName = title.replace(/' '/g, '_');
         this.author = author;
         this.date = date;
         this.category = category;

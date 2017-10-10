@@ -1,4 +1,12 @@
 # TelerikAcademyFinalProject
+
+For running the project, please follow the steps below:
+
+1. npm install
+2. gulp dev
+3. gulp build - creates a min version of the js and css files
+4. gulp deploy - deploys the project on firebase
+
 Final front-end project
 Steps 
 Requirements for the "Web front-end develeopment" course project

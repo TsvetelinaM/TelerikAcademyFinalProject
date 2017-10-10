@@ -8,18 +8,18 @@ import 'bootstrap';
 
 
 (() => {
-    function loadingScreen() {
-        window.loading_screen = window.pleaseWait({
-            logo: './../styles/imgs/fb_tw.png',
-            backgroundColor: 'grey',
-            loadingHtml: `<div class="spinner">
-            <div class="double-bounce1"></div>
-            <div class="double-bounce2"></div>
-          </div>`
-        });
-        return window.loading_screen;
+    // function loadingScreen() {
+    //     window.loading_screen = window.pleaseWait({
+    //         logo: './../styles/imgs/fb_tw.png',
+    //         backgroundColor: 'grey',
+    //         loadingHtml: `<div class="spinner">
+    //         <div class="double-bounce1"></div>
+    //         <div class="double-bounce2"></div>
+    //       </div>`
+    //     });
+    //     return window.loading_screen;
         
-    };
+    // };
 
 
     homeController.getIndex();
@@ -40,7 +40,6 @@ import 'bootstrap';
     
     // Start application
     $(() => {
-        
         $('.tm-responsive-nav').on('click',()=>{
             $('.tm-nav-dropdown').toggleClass('tm-hidden');
         })
@@ -51,7 +50,10 @@ import 'bootstrap';
             if (localStorage.displayUser) {
                 // User is signed in.
                 // const screen = loadingScreen();
+               
                  app.run('#/');
+                $('.header').removeClass('tm-hidden');
+                $('.tm-footer').removeClass('tm-hidden');
                 $('.tm-btn-add-article').each((index, element)=>{
                     $(element).removeClass('tm-hidden')
                 });
@@ -73,16 +75,20 @@ import 'bootstrap';
                 // const screen = loadingScreen();
                 // No user is signed in.
                 app.run('#/');
-
+                $('.header').removeClass('tm-hidden');
+                $('.tm-footer').removeClass('tm-hidden');
                 $('#tm-btn-signout').addClass('tm-hidden');
                 $('#tm-btn-login').removeClass('tm-hidden');
                 $('#tm-btn-signout-drop').addClass('tm-hidden');
                 $('#tm-btn-login-drop').removeClass('tm-hidden');
                 // screen.finish();
+                $('#main').on('load', function() {
+                    console.log('test');
+                      $('#wrapper').removeClass('tm-hidden');
+                   });
             }
            
         });
-        
     });
 })();
 

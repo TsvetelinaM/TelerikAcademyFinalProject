@@ -38,93 +38,25 @@ const database = {
     },
     
     //Adding data to DB
-    addJSONToDB: (ref, arr) => {
+    addJSONToDB(ref, arr) {
         arr.forEach(element => {
             firebase.database().ref(ref).push(element);
         });
     },
     
     // Getting information about the lists
-    getItems: (ref) => {
+    getItems(ref)  {
         return firebase.database().ref(ref).once('value');
     },
 
-    pushItems: (collection, item) => {
+    pushItems(collection, item)  {
         return firebase.database().ref(collection).push(item);
     },
     
-    pushItemByGivenElement: (ref, element, item) => {
+    pushItemByGivenElement(ref, element, item) {
         return firebase.database().ref(ref).child(element).set(item);
     },
 
-    // getSingleList: (key) => {
-    //     return firebase.database().ref('lists/' + localStorage.uid + '/' + key).once('value');
-    // },
-    // pushList: (list) => {
-    //   return   firebase.database()
-    //         .ref('lists/' + localStorage.uid)
-    //         .push(list);
-
-    // },
-    // removeList: (listKey) => {
-    //     return firebase.database()
-    //         .ref('lists/' + localStorage.uid + '/' + listKey)
-    //         .remove();
-    // },
-    // Getting information about items
-    // getItem: function (listKey, itemKey) {
-    //     return firebase.database()
-    //         .ref('lists/' + localStorage.uid + '/' + listKey + '/_items/' + itemKey)
-    //         .once('value');
-    // },
-    // pushItem: function (listKey, item) {
-    //     return firebase.database()
-    //         .ref('lists/' + localStorage.uid + '/' + listKey + '/_items')
-    //         .push(item);
-    // },
-    // removeItem: function (listKey, itemKey) {
-    //     return firebase.database()
-    //         .ref('lists/' + localStorage.uid + '/' + listKey + '/_items/' + itemKey)
-    //         .remove();
-    // },
-    // updateItemCheckState: function (listKey, itemKey, state) {
-    //     return firebase.database()
-    //         .ref('lists/' + localStorage.uid + '/' + listKey + '/_items/' + itemKey)
-    //         .once('value', function (item) {
-    //             item.ref.update({
-    //                 "_checked": state
-    //             });
-    //         });
-    // },
-    // removeDueDate: function (listKey, itemKey) {
-    //     return firebase.database()
-    //         .ref('lists/' + localStorage.uid + '/' + listKey + '/_items/' + itemKey)
-    //         .once('value', function (item) {
-    //             item.ref.update({
-    //                 "_dueDate": ""
-    //             });
-    //         });
-    // },
-    // updateItem: function (listKey, itemKey, title, dueDate) {
-    //     return firebase.database()
-    //         .ref('lists/' + localStorage.uid + '/' + listKey + '/_items/' + itemKey)
-    //         .once('value', function (item) {
-    //             item.ref.update({
-    //                 "_title": title,
-    //                 "_dueDate": dueDate
-    //             });
-    //         });
-    // },
-    // updateProdItem: function (listKey, itemKey, title, quantity) {
-    //     return firebase.database()
-    //         .ref('lists/' + localStorage.uid + '/' + listKey + '/_items/' + itemKey)
-    //         .once('value', function (item) {
-    //             item.ref.update({
-    //                 "_title": title,
-    //                 "_quantity": quantity
-    //             });
-    //         });
-    // }
 };
 
 export default database;

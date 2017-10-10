@@ -1,5 +1,6 @@
 
 import * as templates from 'templates';
+import * as helpers from 'helpers';
 import  'bootstrap';
 import database from 'database';
 import $ from 'jquery';
@@ -7,22 +8,7 @@ import toastr from 'toastr';
 import Article from 'classArticle';
 import Comment from 'classComment';
 
-const entityMap = {
-    '&': '&amp;',
-    '<': '&lt;',
-    '>': '&gt;',
-    '"': '&quot;',
-    "'": '&#39;',
-    '/': '&#x2F;',
-    '`': '&#x60;',
-    '=': '&#x3D;',
-  };
 
-  const escapeHtml = (string) => {
-    return String(string).replace(/[&<>"'`=\/]/g, (s) => {
-      return entityMap[s];
-    });
-  };
 
 function getAllArticles(context) {
     // const articlesArr = [
@@ -156,23 +142,11 @@ function getSingleArticle(context) {
             });
 
             $('.tm-post-comment-btn').on('click', (ev)=>{
-                const comment = escapeHtml($('.tm-comments-input').val().trim());
+                const comment = helpers.escapeHtml($('.tm-comments-input').val().trim());
                 if (comment.length) {
-                    const currentDate = new Date();
-                    let day = currentDate.getDate();
-                    if ( day < 10 ) {
-                        day = '0' + day;
-                    }
-                    let month = currentDate.getMonth() + 1;
-                    if ( month < 10 ) {
-                        month = '0' + month;
-                    }
-                    const year = currentDate.getFullYear();
-                    const stringDate = day+'-'+month+'-'+year;
-
+                    const stringDate = helpers.getCurrentDate();
                     const addComment = new Comment(currentUser.displayName, stringDate, comment);
 
-                    
                     currentArticle[0].commentsCounter = +currentArticle[0].commentsCounter + 1;
                     $('.tm-comments-counter-span').html(currentArticle[0].commentsCounter);
                     const commentHTML = `<div class="container tm-comment-dialog-container tm-hbox">
@@ -224,6 +198,31 @@ function getSingleArticle(context) {
 function addArticle(context) {
         templates.get('add_article').then((template) => {
             context.$element().html(template());
+        $('.tm-add-article-button').on('click', () => {
+            $('form').submit((e) => { e.preventDefault(); });
+            
+            const currentAuthor = JSON.parse(localStorage.getItem('displayUser'));
+            const currentDay = helpers.getCurrentDate();
+            let articleTitle = $('.tm-textinput-title').val();
+            articleTitle = helpers.escapeHtml(articleTitle.trim());
+            let articleCategory = $('.tm-article-category').val();
+            let articleContent = $('.tm-textinput-content').val();
+            articleContent  = helpers.escapeHtml(articleContent.trim());
+        
+
+
+
+            if (articleTitle && articleCategory && articleContent) {
+                console.log(currentAuthor);
+                const imageUrl = './../../styles/imgs/article2.jpg';
+                const newArticle = new Article(currentAuthor.displayName,currentDay,articleCategory, articleTitle, articleContent, imageUrl)
+                console.log(newArticle);
+                database.pushItems('articles/',newArticle);
+            } else {
+                toastr.error('Please fill in all the input');
+            }
+        });
+
     });
 }
 

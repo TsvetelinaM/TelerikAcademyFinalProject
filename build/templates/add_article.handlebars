@@ -7,36 +7,30 @@
         <form class="form-horizontal tm-form" method="post">
 
             <div class="form-group">
-                <label class="col-xs-6 col-md-3 control-label" for="tm-textinput-title">Article title:</label>  
+                <label class="col-xs-4 col-md-4 control-label" for="tm-textinput-title">Article title:</label>  
                 <div class="col-xs-12 col-md-8">
                     <input id="tm-textinput-title" name="tm-textinput-title" type="text" placeholder="Please enter the article title" class="tm-textinput-title form-control input-md" required="">
                 </div>
             </div>
-
             <div class="form-group">
-                <label for="sel1" class="col-xs-6 col-md-3 control-label">Article category:</label>
+                <label class="col-xs-4 col-md-4 control-label" for="tm-textinput-category">Article category:</label>  
                 <div class="col-xs-12 col-md-8">
-                <select class="form-control input-md tm-article-category" placeholder="Please choose" id="sel1">
-                    <option>Accounting</option>
-                    <option>Taxes</option>
-                    <option>Salaries</option>
-                    <option>Other</option>
-                </select>
+                    <input id="tm-textinput-category" name="tm-textinput-category" type="text" placeholder="Please enter the article category" class="tm-textinput-category form-control input-md" required="">
                 </div>
             </div>
 
             <div class="form-group">
-                <label class="col-xs-6 col-md-3 control-label" for="tm-textinput-content">Article content:</label>  
+                <label class="col-xs-4 col-md-4 control-label" for="tm-textinput-content">Article content:</label>  
                 <div class="col-xs-12 col-md-8">
-                    <textarea rows="5" id="tm-textinput-content" name="tm-textinput-content" type="text" placeholder="Please enter the article content" class="tm-textinput-content form-control input-md" required=""></textarea>
+                    <textarea rows="4" cols="50" id="tm-textinput-content" name="tm-textinput-content" type="text" placeholder="Please enter the article content" class="tm-textinput-content form-control input-md" required=""></textarea>
                 </div>
             </div>
 
             <!-- Button -->
             <div class="form-group">
-                <label class="col-xs-12 col-md-3 control-label" for="tm-add"></label>
-                <div class="col-xs-6 col-md-6">
-                    <button id="tm-add" name="tm-add" class="btn btn-primary tm-add-article-button">Add</button>
+                <label class="col-xs-12 col-md-4 control-label" for="tm-add"></label>
+                <div class="col-xs-4 col-md-4">
+                    <button id="tm-add" name="tm-add" class="btn btn-primary tm-singlebutton-login-log">Add</button>
                 </div>
             </div>
 

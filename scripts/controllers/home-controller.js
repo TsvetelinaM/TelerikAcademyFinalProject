@@ -16,9 +16,7 @@ import toastr from 'toastr';
 
 
 
-//article input
-//spaces
-//loader
+
 let templateData;
 
 
@@ -26,8 +24,11 @@ function getIndex() {
     templates.get('index').then((template) => {
         $('body').html(template());
     });
+    
 }
 function getHome(context) {
+    // $('.loader').removeClass('tm-hidden');
+    // $('#wrapper').addClass('tm-hidden');
     //show loading screen
     database.getItems('services')
     .then((services) =>{
@@ -99,6 +100,7 @@ function getHome(context) {
                     }
                 });
             })();
+
         })
 
     })

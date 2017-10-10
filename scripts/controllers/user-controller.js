@@ -45,7 +45,6 @@ function register(context) {
                 const newUser = new User(username, email,  password);
                 database.createUser(email, password, newUser)
                 .then(() => {
-                    // console.log(localStorage.getItem('displayUser'));
                     toastr.success('Successfuly registered');
                     context.redirect('#/');
                 });

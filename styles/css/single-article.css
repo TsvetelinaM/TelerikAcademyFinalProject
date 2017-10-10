@@ -42,10 +42,11 @@
 .tm-dialog {
   margin: 0px;
   position: relative;
+  height: 200px;
+  background: linear-gradient(to bottom, #fefefe 0%, #f4f4f4 50%);
   min-height: auto;
   border: 1px solid #c5c5c5;
   border-radius: 7px;
-  background-color: #ffffff;
   padding: 30px; }
 
 .tm-top-bot {
@@ -89,7 +90,7 @@
 
 .tm-leave-a-comment-container {
   width: 100%;
-  padding: 50px 0 192px 0; }
+  padding: 30px 0 192px 0; }
 
 .tm-comments-label {
   margin: 0px;
@@ -114,9 +115,15 @@
   margin: 0;
   background: transparent; }
 
-@media all and (max-width: 900px) {
+@media all and (max-width: 1024px) {
   .tm-comments-container {
-    width: 80%; } }
+    width: 80%; }
+  .tm-single-article-content-container {
+    overflow-y: auto; }
+  .tm-dialog {
+    height: 100px;
+    overflow: hidden;
+    overflow-y: auto; } }
 
 @media all and (max-width: 770px) {
   .tm-comments-container {

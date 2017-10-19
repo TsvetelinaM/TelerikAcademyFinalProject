@@ -381,7 +381,7 @@ main, #main {
   flex: 1 1 calc(25%);
   overflow: visible;
   position: relative;
-  margin-right: 115px; }
+  margin-right: 105px; }
 
 .tm-footer-section .tm-footer-section-ul {
   line-height: 1.67em; }
@@ -480,6 +480,18 @@ main, #main {
     text-align: left; }
   .tm-footer-section {
     margin-right: 50px; } }
+
+@media all and (max-width: 768px) {
+  .header {
+    margin: 0 5%; }
+  .tm-main {
+    padding: 0 5%; }
+  .tm-main-header {
+    padding: 53px 5% 8px 5%; }
+  .tm_footer_section_copyright {
+    padding: 0 5%; }
+  .tm-footer-articles {
+    padding: 55px 5%; } }
 
 @media all and (max-width: 760px) {
   body {

@@ -4,7 +4,7 @@
             <img src={{this.imagesArray.[0].imageURL}} class="tm-carrousel-image-center">
             <div class="tm-carrousel-image-active-overlay"></div>
             <div class="tm-carrousel-arrow tm-carrousel-arrow-left glyphicon glyphicon-chevron-left"></div>
-            <div class="tm-carrousel-icon-container">
+            <div class="tm-carrousel-icon-container tm-middle">
                 <div class="tm-carrousel-icon tm-carrousel-icon-media"></div>
                 <a class="tm-carrousel-icon tm-carrousel-icon-open glyphicon glyphicon-zoom-in"></a>
             </div>
@@ -13,11 +13,14 @@
                 </div>
             <div class="tm-carrousel-arrow tm-carrousel-arrow-right glyphicon glyphicon-chevron-right"></div>
         </div>
+        {{!-- <div class="tm-img-shadow-container">
+            <div class="tm-carousel-img-shadow"></div> --}}
         <div class="tm-carrousel-image-container">
             {{#each this.imagesArray}}
             <div class="tm-carrousel-image"><img src={{this.imageURL}}></div>
             {{/each}}
         </div>
+        {{!-- </div> --}}
     </div>
 </div>
 <div class="container-fluid tm-home-main ">
@@ -81,11 +84,15 @@
         {{#each this.services}}
         <article class="container tm-home-recent-work-container" >
             <div class="container tm-home-recent-work-img">
+                
+                {{!-- <div class="tm-img-shadow-container">
+                    <div class="tm-img-shadow"></div> --}}
                 {{#if this.imgUrl}}
                     <a href="#/services/{{this.linkName}}"><img src={{this.imgUrl}} alt="" class="tm-img tm-img-lower-opacity"></a>
                 {{else}}
                     <div class="tm-no-image"></div>
                 {{/if}}
+                {{!-- </div> --}}
                 <div class="tm-middle">
                         <img src="./../styles/imgs/enlarge.png" alt="" >
                         <img src="./../styles/imgs/zoom-in.png" alt="" >                    

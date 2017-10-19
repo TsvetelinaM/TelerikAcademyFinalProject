@@ -165,6 +165,12 @@
   body {
     font-size: 100%; } }
 
+@media all and (max-width: 768px) {
+  .tm-home-info {
+    padding: 0 5%; }
+  .tm-home-recent-work {
+    padding: 0 5%; } }
+
 @media all and (max-width: 640px) {
   body {
     font-size: 95%; }

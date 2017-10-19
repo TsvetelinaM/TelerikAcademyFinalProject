@@ -9,11 +9,14 @@
         <article class="container tm-servise-container" >
             <div class="tm-service-title">{{this.title}}</div>
             <div class="container tm-service-img tm-services-img">
+                <div class="tm-img-shadow-container">
+                <div class="tm-img-shadow"></div>
                 {{#if this.imgUrl}}
                     <img src={{this.imgUrl}} alt="" class="tm-img tm-img-lower-opacity">
                 {{else}}
                     <div class="tm-no-image"></div>
                 {{/if}}
+                </div>
                 <div class="tm-middle">
                         <img src="./../styles/imgs/enlarge.png" alt="" >
                          <a href="#/services/{{this.linkName}}"><img src="./../styles/imgs/zoom-in.png" alt="" ></a>                  
